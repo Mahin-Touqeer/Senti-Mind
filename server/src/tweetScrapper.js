@@ -20,7 +20,7 @@ module.exports = async function getTweets(
     launchContext: {
       launchOptions: {
         headless: true,
-           executablePath: process.env.NODE_ENV=="production"? "./cache/chrome-linux/chrome": puppeteer.executablePath(),
+           executablePath: process.env.NODE_ENV=="production"? "./cache/chromium/linux-1479723/chrome-linux/chrome": puppeteer.executablePath(),
         args: ["--no-sandbox", "--disable-setuid-sandbox"],
       },
     },
