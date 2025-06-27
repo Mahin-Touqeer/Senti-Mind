@@ -1,4 +1,5 @@
 const { PuppeteerCrawler, Dataset, log } = require("crawlee");
+const puppeteer = require("puppeteer");
 const cookies = require("../controllers/cookies");
 const { getTwitterArticle } = require("../utils/utils");
 const Article = require("../models/Article");
@@ -19,6 +20,7 @@ module.exports = async function getTweets(
     launchContext: {
       launchOptions: {
         headless: true,
+           executablePath: puppeteer.executablePath(),
         args: ["--no-sandbox", "--disable-setuid-sandbox"],
       },
     },
