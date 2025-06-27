@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "node app.js",
-    "postinstall": "puppeteer install"
+    "postinstall": "npx @puppeteer/browsers install chromium --path ./cache"
   },
   "keywords": [],
   "author": "",
