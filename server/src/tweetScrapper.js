@@ -35,7 +35,7 @@ module.exports = async function getTweets(
 
         await page.setRequestInterception(true);
         console.log(timeoutCount);
-        if (timeoutCount) {
+        if (timeoutCount == 5) {
           res.status(408).json({
             message:
               "Our servers are slow at the moment. Please try again later",
