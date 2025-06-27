@@ -2,12 +2,12 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
 import { FiAlertCircle, FiCheck, FiMail, FiRefreshCw } from "react-icons/fi";
-
+const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 export const EmailVerificationBanner = ({ email }) => {
   const [resendStatus, setResendStatus] = useState(null);
   const { isPending: isResending, mutate } = useMutation({
     mutationFn: async () => {
-      axios.get("http://localhost:6400/auth/send-email-token", {
+      axios.get(`${VITE_BACKEND_URL}/auth/send-email-token`, {
         withCredentials: true,
       });
     },
