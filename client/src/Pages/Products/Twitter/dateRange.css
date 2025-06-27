@@ -1,0 +1,96 @@
+.date-range-wrapper {
+  background-color: #1e2635;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 8px;
+  z-index: 2;
+  margin: 1rem auto;
+}
+
+.rdrCalendarWrapper {
+  width: 100%;
+  background-color: #1e2635 !important;
+  color: #fff !important;
+}
+
+.rdrDateDisplayWrapper {
+  background-color: #1e2635 !important;
+}
+.rdrDateDisplay input {
+  background-color: #323a47 !important;
+  border-radius: 0.5rem;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #fff !important;
+}
+.rdrDateDisplayItem {
+  border: none;
+  border-radius: 1rem;
+}
+
+.rdrDefinedRangesWrapper {
+  background-color: #1e2635 !important;
+  /* border-right: 1px solid #1e2635 !important; */
+}
+
+.rdrStaticRange {
+  background-color: #1e2635 !important;
+  color: #fff !important;
+}
+
+.rdrStaticRange:hover {
+  background-color: #1e2635 !important;
+}
+
+.rdrMonth {
+  background-color: #1e2635 !important;
+  width: 100%;
+}
+
+.rdrDayNumber span {
+  color: #fff !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+  background: #9810fa !important;
+}
+
+.rdrStartEdge,
+.rdrEndEdge,
+.rdrInRange {
+  background: #9810fa !important;
+}
+
+.rdrDayStartPreview,
+.rdrDayEndPreview,
+.rdrDayInPreview {
+  border-color: #6e11b0 !important;
+}
+
+.rdrWeekDay {
+  color: #fff !important;
+}
+
+.rdrMonthAndYearPickers select {
+  color: #fff !important;
+  background-color: #272e3c !important;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.rdrMonthAndYearPickers select:hover {
+  background-color: #2d283c !important;
+}
+.rdrNextPrevButton {
+  background-color: #daa7ff !important;
+  box-shadow: none !important;
+}
+.rdrNextPrevButton:hover {
+  background-color: #c980fd !important;
+}
+.rdrDayDisabled {
+  background-color: transparent;
+  opacity: 10%;
+}

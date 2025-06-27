@@ -1,0 +1,19 @@
+.modal-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: rgba(42, 64, 102, 0.4);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(42, 64, 102, 0.6);
+}

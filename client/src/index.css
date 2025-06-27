@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "tailwindcss";
+@import "react-date-range/dist/styles.css";
+@import "react-date-range/dist/theme/default.css";
+
+body {
+  box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+.rdrDay:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+:root {
+  /* --primary-color: #500289;
+  --secondary-color: #010311; */
+  --primary-color: #500289;
+  --secondary-color: #091047;
+  --tertiary-color: #060d3e;
+  /* --tertiary-color: #050a2d; */
+}
+#root {
+  /* background: linear-gradient(to bottom, #170a2c, #010311); */
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 35%,
+    var(--tertiary-color) 65%
+  );
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#hashtag:checked ~ .labelForHashtag {
+  background-color: #8f37ff;
+}
+
+#text:checked ~ .labelForText {
+  background-color: #8f37ff;
+}
+
+#handle:checked ~ .labelForHandle {
+  background-color: #8f37ff;
+}
+.labelForHashtag,
+.labelForText,
+.labelForHandle {
+  cursor: pointer;
+}
+
+.searchTypeDiv label {
+  transition: 0.3s;
+}
+.textBox::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Modal Scrollbar Styling */
+.modal-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: rgba(143, 55, 255, 0.4);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(143, 55, 255, 0.6);
+}
+
+/* From Uiverse.io by bociKond */
+.loader {
+  width: 44.8px;
+  height: 44.8px;
+  color: #554cb5;
+  position: relative;
+  background: radial-gradient(11.2px, currentColor 94%, #0000);
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(10.08px at bottom right, #0000 94%, currentColor)
+      top left,
+    radial-gradient(10.08px at bottom left, #0000 94%, currentColor) top right,
+    radial-gradient(10.08px at top right, #0000 94%, currentColor) bottom left,
+    radial-gradient(10.08px at top left, #0000 94%, currentColor) bottom right;
+  background-size: 22.4px 22.4px;
+  background-repeat: no-repeat;
+  animation: loader 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes loader {
+  33% {
+    inset: -11.2px;
+    transform: rotate(0deg);
+  }
+
+  66% {
+    inset: -11.2px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
+
+.gradient {
+  position: relative;
+  background: linear-gradient(-45deg, #9e27ff, #e12afb, #f52eca, #9b65ff);
+  background-size: 400% 400%;
+  animation: gradientFlow 10s ease infinite;
+}
+.gradient::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: -1;
+  background: linear-gradient(45deg, #e12afb, #ad46ff, #ff4fd8);
+  filter: blur(50px);
+  opacity: 0.6;
+  z-index: 3;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.shadow {
+  box-shadow: rgba(143, 55, 255, 0.3) 0px 1px 2px 0px,
+    rgba(143, 55, 255, 0.15) 0px 1px 3px 1px;
+}
+
+/* From Uiverse.io by mahiatlinux */
+
+.mydict div {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-top: 0.5rem; */
+  justify-content: center;
+}
+
+.mydict input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.mydict input[type="radio"]:checked + span {
+  box-shadow: 0 0 0 0.0625em #bc5dff;
+  background-color: #8f37ff;
+  z-index: 1;
+  color: #fff;
+}
+
+.mydict label span {
+  display: block;
+  cursor: pointer;
+  background-color: #1e2635;
+  padding: 0.75em 0.75em;
+  position: relative;
+  margin-left: 0.0625em;
+  box-shadow: 0 0 0 0.0625em #4a5568;
+  letter-spacing: 0.05em;
+  color: #a0aec0;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+.active {
+  opacity: 90%;
+  transition: opacity 0.5s;
+}
+
+.alink:active,
+.alink:focus,
+.alink button:active,
+.alink button:focus,
+.alink input:active,
+.alink input:focus,
+.alink a:active,
+.alink a:focus {
+  box-shadow: none;
+}
+.number {
+  color: rgb(245, 178, 245);
+}
+.noShadow {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+a[data-discover="true"] {
+  box-shadow: none;
+}
+
+input:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+button:disabled {
+  opacity: 60%;
+  cursor: not-allowed;
+}
+label[twitter-label="kill"] {
+  opacity: 30%;
+  cursor: not-allowed;
+}
+span[twitter-label="kill"] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+button[twitter-label="kill"] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
