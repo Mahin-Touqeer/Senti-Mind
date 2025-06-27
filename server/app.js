@@ -23,8 +23,10 @@ const cookie_parser = require("cookie-parser");
 const { connectDb } = require("./config/db");
 const Transaction = require("./models/Transaction");
 
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
+
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: FRONTEND_URL,
   optionsSuccessStatus: 200,
   credentials: true,
 };
