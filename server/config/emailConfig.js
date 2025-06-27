@@ -26,7 +26,7 @@ const sendVerificationEmail = (email, emailToken) => {
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2>Email Verification</h2>
         <p>Hello! Please verify your email address by clicking the link below:</p>
-        <a href="http://localhost:6400/auth/verify-email?token=${emailToken}"
+        <a href="https://senti-mind.onrender.com/auth/verify-email?token=${emailToken}"
            style="background-color: #CB6CE6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
           Verify Email Address
         </a>
