@@ -70,7 +70,7 @@ module.exports = async function getTweets(
       try {
         await page.goto(request.url, {
           waitUntil: "networkidle2",
-          timeout: 20000,
+          timeout: 60000,
         });
       } catch (error) {
         if (error.name === "TimeoutError") {
