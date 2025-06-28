@@ -1,9 +1,11 @@
 const { PuppeteerCrawler, Dataset, log } = require("crawlee");
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-extra");
 const cookies = require("../controllers/cookies");
 const { getTwitterArticle } = require("../utils/utils");
 const Article = require("../models/Article");
 const User = require("../models/User");
+const StealthPlugin = require("puppeteer-extra-plugin-stealth");
+puppeteer.use(StealthPlugin());
 
 module.exports = async function getTweets(
   search_URL,
@@ -23,7 +25,10 @@ module.exports = async function getTweets(
            executablePath: process.env.NODE_ENV=="production"? "./cache/chromium/linux-1479737/chrome-linux/chrome": puppeteer.executablePath(),
         args: ["--no-sandbox", "--disable-setuid-sandbox"],
       },
+      launcher: puppeteer,
+      useChrome: true,
     },
+    
     preNavigationHooks: [
       async ({ page }) => {
         if (cookies.length) {
