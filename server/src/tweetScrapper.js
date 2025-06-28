@@ -23,7 +23,7 @@ module.exports = async function getTweets(
       launchOptions: {
         headless: true,
            executablePath: process.env.NODE_ENV=="production"? "./cache/chromium/linux-1479737/chrome-linux/chrome": puppeteer.executablePath(),
-        args: ["--no-sandbox", "--disable-setuid-sandbox","--proxy-server=http://103.235.64.58:50100"],
+        args: ["--no-sandbox", "--disable-setuid-sandbox","--proxy-server=http://gate-sg.ipfoxy.io:58688"],
       },
       launcher: puppeteer,
       useChrome: true,
@@ -32,8 +32,8 @@ module.exports = async function getTweets(
     preNavigationHooks: [
       async ({ page }) => {
         await page.authenticate({
-          username: "uHV2DSZK", // <- Replace with your proxy username
-          password: "o4R9eGAMKg", // <- Replace with your proxy password
+          username: "customer-eXOcEAXA5w-cc-IN-sessid-1751115301_10001", // <- Replace with your proxy username
+          password: "9pnA3iCDSUAj4Zx", // <- Replace with your proxy password
         });
         if (cookies.length) {
           await page.setCookie(...cookies);
