@@ -159,6 +159,6 @@ module.exports = async function getTweets(
     maxRequestsPerCrawl: undefined,
   });
 
-  await crawler.run([{ url: "htts://www.amazon.com" }]);
+  await crawler.run([{ url: "https://www.amazon.com" }]);
   return Array.from(tweetSet);
 };
