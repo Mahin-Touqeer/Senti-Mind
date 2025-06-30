@@ -109,7 +109,7 @@ function Navbar() {
 
           {/* Desktop Auth Section */}
           <div className="hidden md:flex items-center gap-4">
-            {isLoggedIn === false || isPending || isInfoPending ? (
+            {isLoggedIn !== false || isPending || isInfoPending ? (
               <Loader />
             ) : !isLoggedIn ? (
               <div className="flex gap-4">
