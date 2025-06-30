@@ -131,7 +131,9 @@ function FAQ() {
           data-aos-once={true}
         >
           Still have questions? We're here to help! E-mail us:
-          sentimind2025@gmail.com
+          <a href="mailto:support@senti-mind.com" className="text-pink-400">
+            sentimind2025@gmail.com
+          </a>
         </p>
         {/* <button
           className="cursor-pointer group/btn relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 p-px font-semibold text-white shadow-[0_1000px_0_0_hsl(0_0%_100%_/_0%)_inset] transition-colors hover:shadow-[0_1000px_0_0_hsl(0_0%_100%_/_2%)_inset]"
