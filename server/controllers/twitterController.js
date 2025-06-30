@@ -1,5 +1,5 @@
 const { createHashtagURL, createSearchURL } = require("../utils/URL_generator");
-const getTweets = require("../src/tweetScrapper");
+const { getTweets, getTweetsOfHandle } = require("../src/tweetScrapper");
 const ExpressError = require("../utils/ExpressError");
 const { getTwitterArticle } = require("../utils/utils.js");
 const { twitterPlans } = require("../utils/businessModel.js");
