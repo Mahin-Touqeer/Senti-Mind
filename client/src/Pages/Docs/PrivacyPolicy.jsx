@@ -8,7 +8,7 @@ function PrivacyPolicy() {
   }, []);
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-gradient-to-br overflow-hidden from-slate-950 via-[#141A4B] to-slate-900 py-16  flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br overflow-hidden from-slate-950 via-[#141A4B] to-slate-900 py-16 px-2  flex items-center justify-center">
       <div className="w-full max-w-3xl mx-auto rounded-2xl bg-[#181A3B]/80 backdrop-blur-md shadow-xl border border-purple-500/10 p-6 sm:p-12 relative">
         {/* Decorative Gradient Orb */}
         <div className="absolute -top-16 -left-16 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
@@ -16,10 +16,10 @@ function PrivacyPolicy() {
 
         <button
           onClick={() => navigate(-1)}
-          className="flex absolute items-center gap-2 px-5 py-2 mb-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium shadow hover:scale-102 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 cursor-pointer"
+          className="flex absolute items-center gap-2 px-3 sm:px-5 py-2  rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium shadow hover:scale-102 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 cursor-pointer"
         >
           <ArrowBackIosNew fontSize="small" />
-          Go Back
+          <span className="hidden sm:block">Go Back</span>
         </button>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
