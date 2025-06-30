@@ -91,11 +91,11 @@ function Box() {
           subscriptionTier={subscriptionTier}
         />
         <div className="lg:w-3/5 w-full lg:pr-8 px-2 flex">
-          {article && exportsEnabled && (
+          {/* {article && exportsEnabled && (
             <div className="absolute inline-block right-11 bg-purple-900/80 rounded-3xl top-8 z-1">
               <DownloadButton article={article} />
             </div>
-          )}
+          )} */}
           <div
             className={`resize-none relative bg-[var(--secondary-color)] rounded-2xl w-full my-6 outline-none p-6 overflow-y-scroll modal-scroll h-[650px] ${
               showDatePicker ? "lg:h-[1188px]" : "lg:h-[797.6px]"
