@@ -8,7 +8,7 @@ function PrivacyPolicy() {
   }, []);
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-[#141A4B] to-slate-900 py-16 px-4 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br overflow-hidden from-slate-950 via-[#141A4B] to-slate-900 py-16  flex items-center justify-center">
       <div className="w-full max-w-3xl mx-auto rounded-2xl bg-[#181A3B]/80 backdrop-blur-md shadow-xl border border-purple-500/10 p-6 sm:p-12 relative">
         {/* Decorative Gradient Orb */}
         <div className="absolute -top-16 -left-16 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
