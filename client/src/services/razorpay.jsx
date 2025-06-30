@@ -24,7 +24,7 @@ export const handlePayment = async (plan) => {
         try {
           console.log(response);
           await axios.post(
-            "http://localhost:6400/subscribe/verify-signature",
+            `${VITE_BACKEND_URL}/subscribe/verify-signature`,
             response,
             {
               withCredentials: true,
