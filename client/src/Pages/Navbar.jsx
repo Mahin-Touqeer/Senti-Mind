@@ -109,7 +109,7 @@ function Navbar() {
 
           {/* Desktop Auth Section */}
           <div className="hidden md:flex items-center gap-4">
-            {isPending || isInfoPending ? (
+            {isLoggedIn === false || isPending || isInfoPending ? (
               <Loader />
             ) : !isLoggedIn ? (
               <div className="flex gap-4">
@@ -239,13 +239,13 @@ function Navbar() {
                   Profile
                 </Link>
               )}
-              <Link
+              {/* <Link
                 to="/blog"
                 className="block py-3 text-white hover:text-purple-300 hover:bg-purple-500/10 rounded-lg px-4 transition-all duration-300 font-medium"
                 onClick={closeMobileMenu}
               >
                 Blog
-              </Link>
+              </Link> */}
               <Link
                 to="/pricing"
                 className="block py-3 text-white hover:text-purple-300 hover:bg-purple-500/10 rounded-lg px-4 transition-all duration-300 font-medium"
