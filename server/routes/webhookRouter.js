@@ -41,8 +41,14 @@ router.post("/all", async (req, res) => {
 
     const event = req.body.event;
     const payload = req.body.payload;
-    const subscription = payload.subscription.entity;
-    const payment = payload.payment.entity;
+    let subscription = null;
+    let payment = null;
+    if (payload.subscription) {
+      subscription = payload.subscription.entity;
+    }
+    if (payload.payment) {
+      payment = payload.payment.entity;
+    }
 
     const user = await User.findOne({
       razorpaySubscriptionId: subscription.id,
