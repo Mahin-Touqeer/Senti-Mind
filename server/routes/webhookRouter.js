@@ -19,6 +19,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/all", async (req, res) => {
+  console.log("webhook triggered");
   try {
     const razorpaySignature = req.headers["x-razorpay-signature"];
     const body = JSON.stringify(req.body);
@@ -75,7 +76,7 @@ async function handleSubscriptionCancelled(subscription) {
   try {
     // Also update the user's subscription status to "inactive"
     const user = await User.findOne({
-      "subscription.razorpaySubscriptionId": subscription.id,
+      razorpaySubscriptionId: subscription.id,
     });
 
     if (user) {
