@@ -19,6 +19,8 @@ import LoginComponent from "./Pages/Auth/Login";
 import PageLoader from "./components/PageLoader";
 import PrivacyPolicy from "./Pages/Docs/PrivacyPolicy";
 import TermsOfService from "./Pages/Docs/TermsOfService";
+import ContactUs from "./Pages/Docs/ContactUs";
+import CancellationPolicy from "./Pages/Docs/CancellationPolicy";
 
 function App() {
   const { isModalOpen, authState } = useSelector((state) => state.modal);
@@ -30,6 +32,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route
+              path="/cancellation-policy"
+              element={<CancellationPolicy />}
+            />
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/analyze" element={<Products />}>

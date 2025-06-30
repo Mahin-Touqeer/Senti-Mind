@@ -136,6 +136,12 @@ function Footer() {
               >
                 Terms of Service
               </Link>
+              <Link
+                to="/cancellation-policy"
+                className="text-sm text-gray-400 hover:text-purple-500 transition-colors"
+              >
+                Cancellation Policy
+              </Link>
             </div>
           </div>
         </div>

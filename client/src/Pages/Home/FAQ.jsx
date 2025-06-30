@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "What is SentiMind and how does it work?",
@@ -130,21 +131,20 @@ function FAQ() {
           data-aos-duration="1000"
           data-aos-once={true}
         >
-          Still have questions? We're here to help! E-mail us:
-          <a href="mailto:support@senti-mind.com" className="text-pink-400">
-            sentimind2025@gmail.com
-          </a>
+          Still have questions? We're here to help!
         </p>
-        {/* <button
+        <button
           className="cursor-pointer group/btn relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 p-px font-semibold text-white shadow-[0_1000px_0_0_hsl(0_0%_100%_/_0%)_inset] transition-colors hover:shadow-[0_1000px_0_0_hsl(0_0%_100%_/_2%)_inset]"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once={true}
         >
           <div className="relative rounded-xl bg-slate-950/50 px-6 py-3 transition-colors group-hover/btn:bg-transparent">
-            <span className="relative">Contact Support</span>
+            <Link to="/contact" className="relative">
+              Contact Support
+            </Link>
           </div>
-        </button> */}
+        </button>
       </div>
     </div>
   );
