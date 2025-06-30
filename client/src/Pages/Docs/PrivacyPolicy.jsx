@@ -16,9 +16,9 @@ function PrivacyPolicy() {
 
         <button
           onClick={() => navigate(-1)}
-          className="flex absolute items-center gap-2 px-3 sm:px-5 py-2  rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium shadow hover:scale-102 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 cursor-pointer"
+          className="flex absolute items-center gap-2 px-3 sm:px-5 py-2  rounded-full sm:bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium sm:shadow hover:scale-102 sm:hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 cursor-pointer "
         >
-          <ArrowBackIosNew fontSize="small" />
+          <ArrowBackIosNew fontSize="small" sx={{ color: "pink" }} />
           <span className="hidden sm:block">Go Back</span>
         </button>
 
