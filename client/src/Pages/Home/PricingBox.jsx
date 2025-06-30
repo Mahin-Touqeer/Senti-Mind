@@ -1,9 +1,5 @@
 import React from "react";
 import { Check, Close } from "@mui/icons-material";
-import { useDispatch } from "react-redux";
-import { displayModal } from "../../Slices/modalSlice";
-import { useQuery } from "@tanstack/react-query";
-import { isLoggedIn as isLoggedInApi } from "../../Utils/api";
 import { useNavigate } from "react-router-dom";
 const PricingBox = ({
   price,
@@ -13,13 +9,7 @@ const PricingBox = ({
   buttonText,
   popular = false,
 }) => {
-  // const dispatch = useDispatch();
-  // const { data: isLoggedIn } = useQuery({
-  //   queryKey: ["isLoggedIn"],
-  //   queryFn: isLoggedInApi,
-  // });
   const navigate = useNavigate();
-  // const totalLoggedIn = isLoggedIn || false;
 
   const handleClick = function () {
     if (plan === "FREE") {
@@ -58,7 +48,7 @@ const PricingBox = ({
             <div className="text-center mb-6">
               <h3 className="text-lg font-bold text-white mb-2">{plan}</h3>
               <div className="flex items-baseline justify-center gap-1 mb-2">
-                <span className="text-4xl font-bold text-white">${price}</span>
+                <span className="text-4xl font-bold text-white">{price}</span>
                 <span className="text-gray-400">/month</span>
               </div>
               <p className="text-sm text-gray-400">{description}</p>

@@ -1,8 +1,25 @@
 import { useQuery } from "@tanstack/react-query";
 import PricingBox from "./PricingBox";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { planIds } from "../../Utils/businessModel";
+const { VITE_IP_URL } = import.meta.env;
 
 function Pricing() {
+  const { data: c, isLoading } = useQuery({
+    queryFn: async () => {
+      try {
+        const authorization = await axios.get(VITE_IP_URL);
+        const c = authorization.data.country === "IN" ? "IN" : "US";
+        return c || "US";
+      } catch (err) {
+        console.log("err: " + err);
+        console.log("Error occured in Authorization");
+        return false;
+      }
+    },
+    queryKey: ["authorization"],
+  });
   return (
     <div className="my-32 alink">
       <h1
@@ -25,7 +42,7 @@ function Pricing() {
 
       <div className="flex justify-center flex-wrap gap-8">
         <PricingBox
-          price={0}
+          price={isLoading ? "$0" : planIds[c]["free"]}
           plan="FREE"
           description="Perfect for getting started"
           features={[
@@ -41,7 +58,7 @@ function Pricing() {
         />
 
         <PricingBox
-          price={9}
+          price={isLoading ? "$7.99" : planIds[c]["basic"]}
           plan="BASIC"
           description="For regular content creators"
           features={[
@@ -58,7 +75,7 @@ function Pricing() {
         />
 
         <PricingBox
-          price={19}
+          price={isLoading ? "$17.99" : planIds[c]["pro"]}
           plan="PRO"
           description="For professional use"
           features={[
