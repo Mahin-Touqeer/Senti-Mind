@@ -246,12 +246,12 @@ const Billing = () => {
                           Your subscription has been cancelled and will end on{" "}
                           <br /> {formatDate(subscription.subscriptionEndDate)}
                         </p>
-                        <Link
+                        {/* <Link
                           to="/pricing"
                           className="w-full bg-indigo-700 text-white py-2 px-4 rounded-lg hover:bg-indigo-800 transition-colors text-center block mt-3"
                         >
                           Resubscribe
-                        </Link>
+                        </Link> */}
                       </div>
                     )}
 

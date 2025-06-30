@@ -98,8 +98,11 @@ router.post("/create-subscription", isLoggedIn, async (req, res, next) => {
     const { plan, authorization } = req.body;
 
     // Input validation
-
-    if (req.user.subscription.subscriptionStatus !== "normal") {
+    console.log(req.user);
+    if (
+      req.user.subscription.subscriptionStatus !== "normal" ||
+      req.user.subscription.subscriptionTier !== "free"
+    ) {
       throw new ExpressError(400, "Plan already active");
     }
 

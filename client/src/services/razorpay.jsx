@@ -58,6 +58,22 @@ export const handlePayment = async (plan) => {
     razorpay.open();
   } catch (error) {
     console.error("Payment Error:", error);
-    alert("Failed to initiate subscription. Try again.");
+    if (error.response) {
+      toast.error(error.response.data.message, {
+        ...toastOptions,
+        style: {
+          backgroundColor: "#fff", // any color you like
+          color: "#000",
+        },
+      });
+    } else {
+      toast.error("Failed to initate subscription", {
+        ...toastOptions,
+        style: {
+          backgroundColor: "#fff", // any color you like
+          color: "#000",
+        },
+      });
+    }
   }
 };

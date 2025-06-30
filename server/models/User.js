@@ -27,6 +27,7 @@ const UserSchema = new mongoose.Schema({
     subscriptionStatus: {
       type: String,
       enum: ["paused", "normal", "cancelled"],
+      default: "normal",
     },
     subscriptionTier: {
       type: String,
