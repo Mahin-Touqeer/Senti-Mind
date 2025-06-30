@@ -148,7 +148,6 @@ export async function isLoggedIn() {
 }
 export async function getInfo() {
   try {
-    console.log(VITE_BACKEND_URL);
     const URL = `${VITE_BACKEND_URL}/auth/info`;
     const response = await axios.get(URL, {
       withCredentials: true,
