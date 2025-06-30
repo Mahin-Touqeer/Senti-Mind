@@ -24,6 +24,8 @@ router.post("/all", async (req, res) => {
     const razorpaySignature = req.headers["x-razorpay-signature"];
     const body = JSON.stringify(req.body);
 
+    console.log(req.body);
+
     // Compute expected signature
     const expectedSignature = crypto
       .createHmac("sha256", RAZORPAY_WEBHOOK_SECRET)
