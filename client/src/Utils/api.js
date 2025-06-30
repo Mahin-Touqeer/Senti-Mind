@@ -136,10 +136,11 @@ export async function logout() {
 export async function isLoggedIn() {
   try {
     const URL = `${VITE_BACKEND_URL}/auth/verify`;
-    await axios.get(URL, {
+    const { data } = await axios.get(URL, {
       withCredentials: true,
     });
-    return true;
+    const { isAuthenticated } = data;
+    return isAuthenticated;
   } catch (err) {
     console.log(err);
     return false;

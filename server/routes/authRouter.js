@@ -1,19 +1,47 @@
 const express = require("express");
+const jwt = require("jsonwebtoken");
 // const WrapAsync = require("../utils/WrapAsync");
 const router = express.Router({ mergeParams: true });
 const authController = require("../controllers/authController");
 const { isLoggedIn } = require("../middlewares/isLoggedIn");
 const Article = require("../models/Article");
 const { sendVerificationEmail } = require("../config/emailConfig.js");
+const User = require("../models/User.js");
 
 router.post("/signup", authController.signup);
 router.post("/login", authController.login);
 
 router.post("/google", authController.googleAuthHandler);
 router.post("/logout", authController.logout);
-router.get("/verify", isLoggedIn, (req, res) => {
-  res.json({ isAuthenticated: true, message: "verified" });
-});
+router.get(
+  "/verify",
+  async (req, res, next) => {
+    try {
+      const token = req.cookies.token;
+      req.auth_token = token;
+      if (!token) {
+        res.json({ isAuthenticated: false });
+        return;
+      }
+
+      const decoded = await jwt.verify(token, process.env.TOKEN_KEY);
+      if (!decoded.uid) {
+        return res.json({ isAuthenticated: false });
+      }
+
+      const user = await User.findById(decoded.uid);
+      if (!user) {
+        return res.json({ isAuthenticated: false });
+      }
+      next();
+    } catch (err) {
+      next(err);
+    }
+  },
+  (req, res) => {
+    res.json({ isAuthenticated: true, message: "verified" });
+  }
+);
 
 router.get("/info", isLoggedIn, async (req, res) => {
   const {
