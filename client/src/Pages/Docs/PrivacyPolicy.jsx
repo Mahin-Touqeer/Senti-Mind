@@ -26,7 +26,7 @@ function PrivacyPolicy() {
           Privacy Policy
         </h1>
         <p className="text-center text-gray-400 mb-8 text-sm">
-          Effective Date: <span className="font-medium">[Insert Date]</span>
+          Effective Date: <span className="font-medium">01 July 2025</span>
         </p>
         <div className="prose prose-invert max-w-none text-gray-300">
           <p>
@@ -59,10 +59,10 @@ function PrivacyPolicy() {
               <b>Payment Information:</b> Processed securely via Razorpay (we do
               not store card details).
             </li>
-            <li>
+            {/* <li>
               <b>Technical Data:</b> IP address, device info, browser type, and
               cookies (for analytics and session management).
-            </li>
+            </li> */}
           </ul>
           <h2 className="mt-8 text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
             2. How We Use Your Information
@@ -85,10 +85,10 @@ function PrivacyPolicy() {
               <b>Gemini API (Google AI)</b> (for article generation)
             </li>
             <li>
-              <b>Razorpay</b> (for secure payments)
+              <b>Perplexity API </b> (for article generation)
             </li>
             <li>
-              <b>Analytics tools</b> (e.g., Google Analytics)
+              <b>Razorpay</b> (for secure payments)
             </li>
           </ul>
           <p>
@@ -106,7 +106,7 @@ function PrivacyPolicy() {
             5. Your Rights
           </h2>
           <ul>
-            <li>Access, update, or delete your personal data</li>
+            <li>Access, view, download or save your personal data</li>
             <li>Cancel your subscription at any time</li>
             <li>
               Contact us regarding privacy at{" "}

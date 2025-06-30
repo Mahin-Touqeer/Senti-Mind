@@ -20,29 +20,29 @@ if (!RAZORPAY_KEY_ID || !RAZORPAY_KEY_SECRET) {
 const planIds = {
   IN: {
     basic: {
-      planId: "plan_Qm9DYOJjnwo8jq",
+      planId: "plan_QjPWFuhJEc4UNV",
       amount: 199,
     },
     pro: {
-      planId: "plan_Qm9ED6EWd6Mdb5",
+      planId: "plan_QjPVhmshFIaVn5",
       amount: 449,
     },
     ultra: {
-      planId: "plan_Qm9Enz4IsfGgjf",
+      planId: "plan_QjPVF9GVru8s82",
       amount: 899,
     },
   },
   US: {
     basic: {
-      planId: "plan_Qm9HNNxecWtb6q",
+      planId: "plan_Qi8E3BaUkckdTE",
       amount: 687,
     },
     pro: {
-      planId: "plan_Qm9I0krvyylhZZ",
+      planId: "plan_QjPPalYVdU6W0T",
       amount: 1558,
     },
     ultra: {
-      planId: "plan_Qm9IStTvvAGHdA",
+      planId: "plan_QjPSYcsYHfO6zg",
       amount: 3290,
     },
   },
@@ -98,6 +98,11 @@ router.post("/create-subscription", isLoggedIn, async (req, res, next) => {
     const { plan, authorization } = req.body;
 
     // Input validation
+
+    if (req.user.subscription.subscriptionStatus !== "normal") {
+      throw new ExpressError(400, "Plan already active");
+    }
+
     if (!plan || !authorization) {
       throw new ExpressError(400, "Plan and authorization are required");
     }

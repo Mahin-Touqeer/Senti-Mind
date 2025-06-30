@@ -25,7 +25,7 @@ function TermsOfService() {
           Terms of Service
         </h1>
         <p className="text-center text-gray-400 mb-8 text-sm">
-          Effective Date: <span className="font-medium">[Insert Date]</span>
+          Effective Date: <span className="font-medium">01 July 2025</span>
         </p>
         <div className="prose prose-invert max-w-none text-gray-300">
           <h2 className="mt-0 text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
@@ -33,8 +33,9 @@ function TermsOfService() {
           </h2>
           <p>
             Senti Mind enables users to generate AI-powered articles from social
-            media inputs (hashtags, handles, queries) using Google’s Gemini API.
-            We offer tiered subscription plans: Free, Basic, Pro, and Ultra.
+            media inputs (hashtags, handles, queries) using Google’s Gemini and
+            Perplexity API. We offer tiered subscription plans: Free, Basic,
+            Pro, and Ultra.
           </p>
           <h2 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
             2. User Accounts
@@ -42,7 +43,7 @@ function TermsOfService() {
           <ul>
             <li>You must provide accurate information when signing up.</li>
             <li>You are responsible for all activity on your account.</li>
-            <li>You may delete your account at any time.</li>
+            {/* <li>You may delete your account at any time.</li> */}
           </ul>
           <h2 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
             3. Subscription & Payments
@@ -99,13 +100,13 @@ function TermsOfService() {
             We may suspend or terminate accounts violating these terms without
             prior notice.
           </p>
-          <h2 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
+          {/* <h2 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
             9. Governing Law
           </h2>
           <p>
             These Terms are governed by the laws of India. Any disputes will be
             subject to the jurisdiction of [Your City/State Court].
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
