@@ -3,13 +3,13 @@ import ReactMarkdown from "react-markdown";
 function Sample() {
   return (
     <div
-      className="bg-[#15134C] text-gray-300/80  p-8 relative rounded-2xl max-w-[56rem] m-auto"
+      className="bg-[#15134C] text-gray-300/80 p-4 md:p-8 relative rounded-2xl max-w-[56rem] m-auto"
       data-aos="fade-up"
     >
-      <div className="absolute p-4 bg-amber-100 text-white -top-6 text-xl rounded-md bg-gradient-to-r from-purple-500 to-pink-400 ">
+      <div className="absolute p-3 md:p-4 bg-amber-100 text-white -top-6 text-xl rounded-md bg-gradient-to-r from-purple-500 to-pink-400 ">
         Sample Article
       </div>
-      <h1 className="text-center text-2xl mt-4 md:mt-0 mb-6 font-bold text-gray-300">
+      <h1 className="text-center text-xl  md:text-2xl mt-4 md:mt-0 mb-6 font-bold text-gray-300">
         #WorldEnvironmentDay
       </h1>
       <div className="h-[408px] overflow-y-scroll modal-scroll">
