@@ -1,15 +1,20 @@
 const { createHashtagURL, createSearchURL } = require("../utils/URL_generator");
-const { getTweets, getTweetsOfHandle } = require("../src/tweetScrapper");
+const getTweets = require("../src/tweetScrapper");
 const ExpressError = require("../utils/ExpressError");
-const User = require("../models/User.js");
-const Article = require("../models/Article.js");
 const { getTwitterArticle } = require("../utils/utils.js");
-// const User = require("../models/user.js");
+const { twitterPlans } = require("../utils/businessModel.js");
+const Article = require("../models/Article.js");
+
 module.exports.hashtag = async (req, res, next) => {
   try {
     const { query, limit, dateRange, selectedAiModel } = req.body;
     console.log(dateRange);
     console.log(selectedAiModel);
+
+    const { apiUsage, usageQuota, subscription } = req.user;
+    const { subscriptionTier } = subscription;
+
+    const maxLimit = twitterPlans[subscriptionTier].maxTweets || 30;
 
     if (!query) {
       throw new ExpressError(400, "Query is required");
@@ -19,24 +24,24 @@ module.exports.hashtag = async (req, res, next) => {
       throw new ExpressError(400, "Valid limit is required");
     }
 
-    if (limit > 50) {
-      throw new ExpressError(400, "Limit cannot exceed 50");
+    if (limit > maxLimit) {
+      throw new ExpressError(400, "Limit cannot exceed " + maxLimit);
     }
 
     if (query.includes(" ")) {
       throw new ExpressError(400, "hashtag not in format");
     }
 
-    const { apiUsage, usageQuota } = req.user;
-
     if (apiUsage >= usageQuota) {
       throw new ExpressError(429, "API usage limit exceeded");
     }
 
+    // res.json({ summary: "This is a test summary" });
+    // return;
+
     const search_URL = createHashtagURL(query, dateRange);
 
     const tweets = await getTweets(search_URL, limit);
-
     if (!tweets.length) {
       res.status(500).json({
         message: `No tweets found for this request`,
@@ -78,7 +83,9 @@ module.exports.hashtag = async (req, res, next) => {
 module.exports.search = async function (req, res, next) {
   try {
     const { query, limit, dateFilter, dateRange, selectedAiModel } = req.body;
-
+    const { apiUsage, usageQuota, subscription } = req.user;
+    const { subscriptionTier } = subscription;
+    const maxLimit = twitterPlans[subscriptionTier].maxTweets || 30;
     if (!query) {
       throw new ExpressError(400, "Query is required");
     }
@@ -87,11 +94,9 @@ module.exports.search = async function (req, res, next) {
       throw new ExpressError(400, "Valid limit is required");
     }
 
-    if (limit > 50) {
-      throw new ExpressError(400, "Limit cannot exceed 50");
+    if (limit > maxLimit) {
+      throw new ExpressError(400, "Limit cannot exceed " + maxLimit);
     }
-
-    const { apiUsage, usageQuota } = req.user;
 
     if (apiUsage >= usageQuota) {
       throw new ExpressError(429, "API usage limit exceeded");
@@ -142,6 +147,10 @@ module.exports.search = async function (req, res, next) {
 module.exports.handle = async function (req, res, next) {
   try {
     const { query, limit, selectedAiModel } = req.body;
+    const { apiUsage, usageQuota, subscription } = req.user;
+    const { subscriptionTier } = subscription;
+    const maxLimit = twitterPlans[subscriptionTier].maxTweets || 30;
+
     if (!query) {
       throw new ExpressError(400, "Handle is required");
     }
@@ -150,15 +159,13 @@ module.exports.handle = async function (req, res, next) {
       throw new ExpressError(400, "Valid limit is required");
     }
 
-    if (limit > 50) {
-      throw new ExpressError(400, "Limit cannot exceed 50");
+    if (limit > maxLimit) {
+      throw new ExpressError(400, "Limit cannot exceed " + maxLimit);
     }
 
-    // if (query.includes(" ")) {
-    //   throw new ExpressError(400, "hashtag not in format");
-    // }
-
-    const { apiUsage, usageQuota } = req.user;
+    if (query.includes(" ")) {
+      throw new ExpressError(400, "handle not in format");
+    }
 
     if (apiUsage >= usageQuota) {
       throw new ExpressError(429, "API usage limit exceeded");
