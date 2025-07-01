@@ -7,12 +7,12 @@ const Transaction = require("../models/Transaction");
 const User = require("../models/User");
 
 const planIdToPlan = {
-  plan_QjPWFuhJEc4UNV: "basic",
-  plan_QjPVhmshFIaVn5: "pro",
-  plan_QjPVF9GVru8s82: "ultra",
-  plan_Qi8E3BaUkckdTE: "basic",
-  plan_QjPPalYVdU6W0T: "pro",
-  plan_QjPSYcsYHfO6zg: "ultra",
+  plan_Qm9DYOJjnwo8jq: "basic",
+  plan_Qm9ED6EWd6Mdb5: "pro",
+  plan_Qm9Enz4IsfGgjf: "ultra",
+  plan_Qm9HNNxecWtb6q: "basic",
+  plan_Qm9I0krvyylhZZ: "pro",
+  plan_Qm9IStTvvAGHdA: "ultra",
 };
 router.get("/", (req, res) => {
   res.json({ message: "This route is for production later" });

@@ -20,29 +20,29 @@ if (!RAZORPAY_KEY_ID || !RAZORPAY_KEY_SECRET) {
 const planIds = {
   IN: {
     basic: {
-      planId: "plan_QjPWFuhJEc4UNV",
+      planId: "plan_Qm9DYOJjnwo8jq",
       amount: 199,
     },
     pro: {
-      planId: "plan_QjPVhmshFIaVn5",
+      planId: "plan_Qm9ED6EWd6Mdb5",
       amount: 449,
     },
     ultra: {
-      planId: "plan_QjPVF9GVru8s82",
+      planId: "plan_Qm9Enz4IsfGgjf",
       amount: 899,
     },
   },
   US: {
     basic: {
-      planId: "plan_Qi8E3BaUkckdTE",
+      planId: "plan_Qm9HNNxecWtb6q",
       amount: 687,
     },
     pro: {
-      planId: "plan_QjPPalYVdU6W0T",
+      planId: "plan_Qm9I0krvyylhZZ",
       amount: 1558,
     },
     ultra: {
-      planId: "plan_QjPSYcsYHfO6zg",
+      planId: "plan_Qm9IStTvvAGHdA",
       amount: 3290,
     },
   },
