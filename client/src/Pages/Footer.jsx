@@ -24,28 +24,28 @@ function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  to="/"
+                <a
+                  href="/"
                   className="text-gray-400 hover:text-purple-500 transition-colors text-sm"
                 >
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/analyze/twitter"
+                <a
+                  href="/analyze/twitter"
                   className="text-gray-400 hover:text-purple-500 transition-colors text-sm"
                 >
                   Twitter Analysis
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/analyze/reddit"
+                <a
+                  href="/analyze/reddit"
                   className="text-gray-400 hover:text-purple-500 transition-colors text-sm"
                 >
                   Reddit Analysis
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
