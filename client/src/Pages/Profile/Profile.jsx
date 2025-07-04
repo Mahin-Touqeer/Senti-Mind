@@ -473,7 +473,7 @@ const Profile = () => {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    Upto 250 tweets per month
+                    Upto 250 requests per month
                   </li>
                   <li className="flex items-center gap-2 text-stone-300">
                     <svg
@@ -489,7 +489,7 @@ const Profile = () => {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    Advanced sentiment analysis
+                    Upto 200 tweets analysis per request
                   </li>
                   <li className="flex items-center gap-2 text-stone-300">
                     <svg

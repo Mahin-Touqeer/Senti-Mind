@@ -4,6 +4,7 @@ const ExpressError = require("../utils/ExpressError");
 const { getTwitterArticle } = require("../utils/utils.js");
 const { twitterPlans } = require("../utils/businessModel.js");
 const Article = require("../models/Article.js");
+const User = require("../models/User.js");
 
 module.exports.hashtag = async (req, res, next) => {
   try {
@@ -55,7 +56,7 @@ module.exports.hashtag = async (req, res, next) => {
 
     // Update API usage
     console.log("updating user...");
-
+    console.log(req.user._id);
     await User.findByIdAndUpdate(req.user._id, { $inc: { apiUsage: 1 } });
 
     console.log("updated user");
