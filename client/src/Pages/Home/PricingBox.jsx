@@ -38,7 +38,7 @@ const PricingBox = ({
           popular ? "shadow-purple-500/25" : ""
         }`}
       >
-        <div className="relative rounded-2xl bg-[#141A4B]/50 backdrop-blur-sm p-6 h-[520px] flex flex-col">
+        <div className="relative rounded-2xl bg-[#141A4B]/50 backdrop-blur-sm p-6 h-[480px] flex flex-col">
           {/* Gradient background effects */}
           <div className="absolute -left-16 -top-16 h-32 w-32 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/0 blur-2xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-70" />
           <div className="absolute -bottom-16 -right-16 h-32 w-32 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-500/0 blur-2xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-70" />
@@ -94,11 +94,11 @@ const PricingBox = ({
               </button>
 
               {/* Money back guarantee */}
-              <div className="mt-4 text-center">
+              {/* <div className="mt-4 text-center">
                 <span className="text-xs text-gray-400">
                   30-day money-back guarantee
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

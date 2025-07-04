@@ -67,7 +67,7 @@ function Pricing() {
             { text: "Enhanced Reddit analysis", available: true },
             { text: "Advanced AI insights", available: true },
             { text: "PDF/Word export", available: true },
-            { text: "Custom date ranges", available: false },
+            { text: "Custom date ranges", available: true },
             { text: "Priority support", available: false },
           ]}
           buttonText="Choose Basic"
@@ -79,8 +79,8 @@ function Pricing() {
           plan="PRO"
           description="For professional use"
           features={[
-            { text: "250 searches", available: true },
-            { text: "upto 150 tweets per search", available: true },
+            { text: "180 searches", available: true },
+            { text: "upto 120 tweets per search", available: true },
             { text: "Full Reddit access", available: true },
             { text: "Premium AI models", available: true },
             { text: "PDF/Word export", available: true },

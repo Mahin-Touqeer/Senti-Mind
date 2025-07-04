@@ -139,11 +139,11 @@ function FAQ() {
           data-aos-duration="1000"
           data-aos-once={true}
         >
-          <div className="relative rounded-xl bg-slate-950/50 px-6 py-3 transition-colors group-hover/btn:bg-transparent">
-            <Link to="/contact" className="relative">
-              Contact Support
-            </Link>
-          </div>
+          <Link to="/contact">
+            <div className="relative rounded-xl bg-slate-950/50 px-6 py-3 transition-colors group-hover/btn:bg-transparent">
+              <div className="relative">Contact Support</div>
+            </div>
+          </Link>
         </button>
       </div>
     </div>
