@@ -33,10 +33,10 @@ function ContactUs() {
           <div className="flex items-center gap-3 bg-[#141A4B]/70 px-6 py-4 rounded-xl shadow border border-purple-500/10">
             <EmailOutlinedIcon className="text-purple-400" />
             <a
-              href="mailto:sentimind2025@gmail.com"
+              href="mailto:support@sentimind.in"
               className="text-lg font-medium text-purple-300 hover:text-pink-400 transition-colors duration-200"
             >
-              sentimind2025@gmail.com
+              support@sentimind.in
             </a>
           </div>
           <p className="text-gray-400 text-sm mt-4 text-center">

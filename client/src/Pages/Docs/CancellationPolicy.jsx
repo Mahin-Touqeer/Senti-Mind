@@ -50,10 +50,10 @@ function CancellationPolicy() {
             <li>
               <b>Questions?</b> Contact us at{" "}
               <a
-                href="mailto:sentimind2025@gmail.com"
+                href="mailto:support@sentimind.in"
                 className="text-purple-300 hover:text-pink-400 transition-colors"
               >
-                sentimind2025@gmail.com
+                support@sentimind.in
               </a>
               .
             </li>

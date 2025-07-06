@@ -110,8 +110,8 @@ function PrivacyPolicy() {
             <li>Cancel your subscription at any time</li>
             <li>
               Contact us regarding privacy at{" "}
-              <a href="mailto:support@senti-mind.com" className="text-pink-400">
-                sentimind2025@gmail.com
+              <a href="mailto:support@sentimind.in" className="text-pink-400">
+                support@sentimind.in
               </a>
             </li>
           </ul>
