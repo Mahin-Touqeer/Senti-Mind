@@ -12,7 +12,7 @@ import WhoIsItFor from "./WhoIsItFor";
 
 function Home() {
   return (
-    <>
+    <div className="bg-linear-to-br from-[#500289] via-[#060d3e] to-[#060d3e]">
       <Navbar />
       <div className="m-auto xl:max-w-[1050px] w-98/100 text-stone-100">
         <Hero />
@@ -26,7 +26,7 @@ function Home() {
         <FAQ />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
