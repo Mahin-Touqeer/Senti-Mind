@@ -21,6 +21,7 @@ import PrivacyPolicy from "./Pages/Docs/PrivacyPolicy";
 import TermsOfService from "./Pages/Docs/TermsOfService";
 import ContactUs from "./Pages/Docs/ContactUs";
 import CancellationPolicy from "./Pages/Docs/CancellationPolicy";
+import EmailVerification from "./Pages/Docs/EmailVerification";
 
 function App() {
   const { isModalOpen, authState } = useSelector((state) => state.modal);
@@ -33,6 +34,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route
+              path="/verify-email/:token"
+              element={<EmailVerification />}
+            />
             <Route
               path="/cancellation-policy"
               element={<CancellationPolicy />}
