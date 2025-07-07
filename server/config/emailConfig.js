@@ -4,10 +4,10 @@ const nodemailer = require("nodemailer");
 
 const createTransporter = () => {
   return nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
+    // service: "gmail",
+    host: "smtp.zoho.in",
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.EMAIL_USERNAME,
       pass: process.env.EMAIL_APP_PASSWORD,
@@ -19,7 +19,7 @@ const sendVerificationEmail = (email, emailToken) => {
   const transporter = createTransporter();
 
   const mailOptions = {
-    from: `Senti Mind`,
+    from: '"Senti Mind" <support@sentimind.in>',
     to: email,
     subject: "Please verify your email address",
     html: `
