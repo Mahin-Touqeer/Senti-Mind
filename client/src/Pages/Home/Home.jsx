@@ -7,6 +7,7 @@ import HowItWorks from "./HowItWorks";
 import Pricing from "./Pricing";
 import Sample from "./Sample";
 import Testimonials from "./Testimonials";
+import UniqueValueSection from "./UniqueValueSection";
 import Video from "./Video";
 import WhoIsItFor from "./WhoIsItFor";
 
@@ -16,6 +17,7 @@ function Home() {
       <Navbar />
       <div className="m-auto xl:max-w-[1050px] w-98/100 text-stone-100">
         <Hero />
+        <UniqueValueSection />
         <Video />
         <Features />
         <HowItWorks />

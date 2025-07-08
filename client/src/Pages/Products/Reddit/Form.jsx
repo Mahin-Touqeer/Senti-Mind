@@ -19,7 +19,7 @@ function Form2({ handleSubmission, subscriptionTier, isMutating }) {
   };
   return (
     <form
-      className="lg:w-2/5 w-full p-6 bg-mber-800"
+      className="lg:w-2/5 w-full py-6 px-2 lg:px-6 bg-mber-800"
       onSubmit={handleSubmit(onSubmit)}
     >
       <h1>Enter a subreddit to analyze</h1>
@@ -29,7 +29,7 @@ function Form2({ handleSubmission, subscriptionTier, isMutating }) {
         <input
           type="text"
           className="bg-[#2D283C] rounded-xl w-full p-4 my-2 outline-0"
-          placeholder='Elections2025 or "climate policy"'
+          placeholder='technology or "story"'
           name="subreddit"
           {...register("subreddit")}
           required
@@ -91,8 +91,7 @@ function Form2({ handleSubmission, subscriptionTier, isMutating }) {
           disabled={isMutating}
         />
         <div className="text-sm text-gray-400 mt-1">
-          Your {subscriptionTier} plan allows up to {currentPlan.maxPosts}{" "}
-          tweets
+          Your {subscriptionTier} plan allows up to {currentPlan.maxPosts} posts
         </div>
       </>
 

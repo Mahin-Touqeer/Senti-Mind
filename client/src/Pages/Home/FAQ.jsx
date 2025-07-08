@@ -3,6 +3,17 @@ import { ExpandMore, ExpandLess } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 const faqs = [
   {
+    question: "Is SentiMind just another AI chatbot?",
+    answer:
+      "No. SentiMind pulls real tweets directly from Twitter, analyzes them, and gives you actionable insights. We don’t generate or invent content — every report is based on real data.",
+  },
+  {
+    question: "Can’t ChatGPT or Perplexity do this?",
+    answer:
+      "No. General AI tools can’t scrape Twitter or access live tweet data. SentiMind is built to analyze and summarize actual tweets, giving you insights you won’t find elsewhere.",
+  },
+
+  {
     question: "What is SentiMind and how does it work?",
     answer:
       "SentiMind is an AI-powered social media analysis platform that scrapes and analyzes tweets and Reddit posts based on hashtags or topics you provide. Our advanced algorithms process the data and generate comprehensive articles with sentiment analysis, helping you understand public opinion and trends instantly.",
@@ -18,35 +29,35 @@ const faqs = [
       "The number of posts you can analyze depends on your subscription plan. Free users can analyze up to 30 tweets per query, while subscribed users can analyze up to 200 tweets or 400 Reddit posts.",
   },
   {
-    question: "How accurate is the sentiment analysis?",
+    question: "How often is the data updated?",
     answer:
-      "Our AI-powered sentiment analysis uses advanced natural language processing models. The system continuously learns and improves from new data, ensuring reliable insights for your social media analysis needs.",
+      "SentiMind provides real-time analysis capabilities. When you run a query, we fetch the most recent posts available from the platforms. For trending topics, we recommend running analysis periodically to capture evolving conversations.",
   },
+  // {
+  //   question: "How accurate is the sentiment analysis?",
+  //   answer:
+  //     "Our AI-powered sentiment analysis uses advanced natural language processing models. The system continuously learns and improves from new data, ensuring reliable insights for your social media analysis needs.",
+  // },
   {
     question: "Can I customize the date range for analysis?",
     answer:
       "Yes! SentiMind allows you to specify custom date ranges for your analysis. You can analyze posts from the last 24 hours, past week, month, or set a specific date range that suits your research needs.",
   },
-  {
-    question: "Is my data secure and private?",
-    answer:
-      "Absolutely. We take data security seriously. All analyzed data is processed securely and is not stored permanently on our servers. We comply with data protection regulations and ensure your queries and results remain private.",
-  },
+  // {
+  //   question: "Is my data secure and private?",
+  //   answer:
+  //     "Absolutely. We take data security seriously. All analyzed data is processed securely and is not stored permanently on our servers. We comply with data protection regulations and ensure your queries and results remain private.",
+  // },
   {
     question: "What formats can I export my analysis results in?",
     answer:
       "You can export your analysis results in multiple formats including PDF reports, or WORD docs. We are continuously working on expanding it to CSV and JSON for developers.",
   },
-  {
-    question: "Do you offer API access for developers?",
-    answer:
-      "Currently, we do not provide RESTful API access for developers and businesses",
-  },
-  {
-    question: "How often is the data updated?",
-    answer:
-      "SentiMind provides real-time analysis capabilities. When you run a query, we fetch the most recent posts available from the platforms. For trending topics, we recommend running analysis periodically to capture evolving conversations.",
-  },
+  // {
+  //   question: "Do you offer API access for developers?",
+  //   answer:
+  //     "Currently, we do not provide RESTful API access for developers and businesses",
+  // },
 ];
 
 function FAQ() {

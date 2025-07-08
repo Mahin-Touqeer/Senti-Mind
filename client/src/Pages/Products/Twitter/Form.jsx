@@ -125,7 +125,10 @@ function Form({
 
   return (
     <>
-      <form className="lg:w-2/5 w-full p-6" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className="lg:w-2/5 w-full py-6 px-2 lg:px-6"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         {/* Query Input  */}
         <>
           <h1>Enter a hashtag or keyword to analyze</h1>

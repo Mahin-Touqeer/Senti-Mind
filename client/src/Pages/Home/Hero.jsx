@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <div className="relative py-24 lg:py-24 xl:py-36 text-center p-4 font-[700] overflow-hidden">
+    <div className="relative pt-24 pb-16 lg:pt-24 xl:pt-36 text-center p-4 font-[700] overflow-hidden">
       {/* Background texture and effects */}
       <div className="absolute inset-0 z-10">
         {/* Subtle lines pattern */}
@@ -25,7 +25,7 @@ function Hero() {
       {/* Content */}
       <div className="relative z-10">
         <h1
-          className="text-[3rem]/[4rem] sm:text-[3.5rem]/[4.5rem] lg:text-[4rem]/[5rem] xl:text-[4.5rem]/[6rem] line-he"
+          className="text-[3rem]/[4rem] sm:text-[3.5rem]/[4.5rem] lg:text-[4rem]/[5rem] xl:text-[4.5rem]/[6rem]"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
