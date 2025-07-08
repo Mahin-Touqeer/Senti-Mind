@@ -164,14 +164,14 @@ function UniqueValueSection() {
       </div> */}
 
       {/* Supporting Messaging */}
-      <div className="max-w-4xl px-2 mx-auto mb-12">
+      {/* <div className="max-w-4xl px-2 mx-auto mb-12">
         <ul className="list-disc list-inside text-gray-300 space-y-2 text-lg">
-          {/* <li>
+          <li>
             <span className="font-semibold text-white">
               SentiMind doesn’t generate trends or opinions
             </span>{" "}
             — it analyzes the actual tweets you care about.
-          </li> */}
+          </li>
           <li data-aos="fade-up" data-aos-duration="750">
             <span className="font-semibold text-white">
               Unlike generic AI tools
@@ -186,7 +186,7 @@ function UniqueValueSection() {
             — not just another AI chatbot.
           </li>
         </ul>
-      </div>
+      </div> */}
 
       {/* Trust-Building Badges */}
       <div
