@@ -11,7 +11,7 @@ function UniqueValueSection() {
   const [faqOpen, setFaqOpen] = useState(null);
 
   return (
-    <section className="relative    rounded-3xl  mb-24">
+    <section className="relative  my-36  rounded-3xl  mb-24">
       {/* Animated background orbs */}
       <div className="absolute opacity-50 top-10 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute opacity-50 bottom-10 right-10 w-96 h-96 bg-pink-500/15 rounded-full blur-3xl pointer-events-none" />
@@ -21,7 +21,7 @@ function UniqueValueSection() {
         className="text-3xl sm:text-4xl font-extrabold text-center mb-10 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text"
         data-aos="fade-up"
         data-aos-duration="750"
-        data-aos-delay="1000"
+        // data-aos-delay="1000"
       >
         Real Twitter Data. Real Insights. No AI Guesswork.
       </h2>
@@ -41,14 +41,14 @@ function UniqueValueSection() {
           </span>
         </div>
       </div>
-      <p
+      {/* <p
         className="text-center text-gray-300 mb-10 text-lg max-w-2xl mx-auto"
         data-aos="fade-up"
         data-aos-duration="750"
       >
         Every insight comes from actual tweets, scraped and analyzed in real
         time. No hallucinated trends, no fabricated data.
-      </p>
+      </p> */}
 
       {/* Comparison Table */}
       <div
@@ -198,12 +198,12 @@ function UniqueValueSection() {
           <Verified className="mr-2" fontSize="small" />
           Powered by Real Twitter Data
         </span>
-        <span className="inline-flex items-center px-4 py-2 rounded-full bg-slate-900/80 border border-purple-500/30 text-purple-300 font-semibold shadow">
+        {/* <span className="inline-flex items-center px-4 py-2 rounded-full bg-slate-900/80 border border-purple-500/30 text-purple-300 font-semibold shadow">
           No AI-Generated Trends — 100% Authentic Insights
         </span>
         <span className="inline-flex items-center px-4 py-2 rounded-full bg-slate-900/80 border border-pink-400/30 text-pink-300 font-semibold shadow">
           Your Hashtag. Your Handle. Your Data.
-        </span>
+        </span> */}
       </div>
 
       {/* FAQ Section */}

@@ -17,8 +17,8 @@ function Home() {
       <Navbar />
       <div className="m-auto xl:max-w-[1050px] w-98/100 text-stone-100">
         <Hero />
-        <UniqueValueSection />
         <Video />
+        <UniqueValueSection />
         <Features />
         <HowItWorks />
         <Sample />
