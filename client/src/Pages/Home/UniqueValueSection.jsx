@@ -18,7 +18,7 @@ function UniqueValueSection() {
 
       {/* Section Title */}
       <h2
-        className="text-3xl sm:text-4xl font-extrabold text-center mb-4 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text"
+        className="text-3xl sm:text-4xl font-extrabold text-center mb-10 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text"
         data-aos="fade-up"
         data-aos-duration="750"
         data-aos-delay="1000"
