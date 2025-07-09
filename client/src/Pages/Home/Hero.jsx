@@ -25,7 +25,7 @@ function Hero() {
       {/* Content */}
       <div className="relative z-10">
         <h1
-          className="text-[3rem]/[4rem] sm:text-[3.5rem]/[4.5rem] lg:text-[4rem]/[5rem] xl:text-[4.5rem]/[6rem]"
+          className="text-[3.5rem]/[4.5rem] text-left sm:text-center lg:text-[4rem]/[5rem] xl:text-[4.5rem]/[6rem]"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
@@ -34,7 +34,7 @@ function Hero() {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Understand <br className="md:hidden" /> the Internet's
+            Understand <br className="sm:hidden" /> the Internet's
           </span>
           <br />
           <span
@@ -47,7 +47,7 @@ function Hero() {
           </span>
         </h1>
         <p
-          className="text-xl my-4 text-gray-400"
+          className="text-xl my-4 text-gray-400 text-left  sm:text-center"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="500"
