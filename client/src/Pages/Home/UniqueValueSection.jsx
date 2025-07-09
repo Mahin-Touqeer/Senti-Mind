@@ -52,69 +52,77 @@ function UniqueValueSection() {
 
       {/* Comparison Table */}
       <div
-        className="overflow-x-auto  mb-12 flex justify-center"
+        className="overflow-x-auto mb-12 flex justify-center "
         data-aos="fade-up"
         data-aos-duration="750"
       >
-        <table className="min-w-[340px] max-w-xl w-full text-sm bg-gradient-to-r from-[#320D69] via-[#230E59] to-[#170E4B]  rounded-2xl  mx-auto">
+        <table className="min-w-[280px] max-w-4xl w-full text-xs sm:text-sm lg:text-base bg-gradient-to-r from-[#320D69] via-[#230E59] to-[#170E4B] rounded-2xl mx-auto shadow-lg">
           <thead>
             <tr>
-              <th className="py-3 px-4 text-left text-gray-300 font-semibold">
+              <th className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-left text-gray-300 font-semibold text-xs sm:text-sm lg:text-base">
                 Feature
               </th>
-              <th className="py-3 px-4 text-center text-purple-400 font-semibold">
+              <th className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-purple-400 font-semibold text-xs sm:text-sm lg:text-base">
                 SentiMind
               </th>
-              <th className="py-3 px-4 text-center text-gray-400 font-semibold">
+              <th className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-gray-400 font-semibold text-xs sm:text-sm lg:text-base">
                 ChatGPT / Perplexity
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-purple-500/10">
             <tr>
-              <td className="py-2 px-4 text-gray-200">Data Source</td>
-              <td className="py-2 px-4 text-center text-green-400 font-medium">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-gray-200 text-xs sm:text-sm lg:text-base">
+                Data Source
+              </td>
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-green-400 font-medium text-xs sm:text-sm lg:text-base">
                 Live tweets from Twitter (X)
               </td>
-              <td className="py-2 px-4 text-center text-gray-400">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-gray-400 text-xs sm:text-sm lg:text-base">
                 No direct Twitter access
               </td>
             </tr>
             <tr>
-              <td className="py-2 px-4 text-gray-200">Real-Time Scraping</td>
-              <td className="py-2 px-4 text-center text-green-400 font-medium">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-gray-200 text-xs sm:text-sm lg:text-base">
+                Real-Time Scraping
+              </td>
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-green-400 font-medium text-xs sm:text-sm lg:text-base">
                 Yes
               </td>
-              <td className="py-2 px-4 text-center text-gray-400">No</td>
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-gray-400 text-xs sm:text-sm lg:text-base">
+                No
+              </td>
             </tr>
             <tr>
-              <td className="py-2 px-4 text-gray-200">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-gray-200 text-xs sm:text-sm lg:text-base">
                 Latest Trends from Twitter
               </td>
-              <td className="py-2 px-4 text-center text-green-400 font-medium">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-green-400 font-medium text-xs sm:text-sm lg:text-base">
                 Yes
               </td>
-              <td className="py-2 px-4 text-center text-gray-400">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-gray-400 text-xs sm:text-sm lg:text-base">
                 Only based on web/news
               </td>
             </tr>
             <tr>
-              <td className="py-2 px-4 text-gray-200">AI Content Generation</td>
-              <td className="py-2 px-4 text-center text-gray-400">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-gray-200 text-xs sm:text-sm lg:text-base">
+                AI Content Generation
+              </td>
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-gray-400 text-xs sm:text-sm lg:text-base">
                 No (analyzes real tweets only)
               </td>
-              <td className="py-2 px-4 text-center text-pink-400 font-medium">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-pink-400 font-medium text-xs sm:text-sm lg:text-base">
                 Yes (can generate text)
               </td>
             </tr>
             <tr>
-              <td className="py-2 px-4 text-gray-200">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-gray-200 text-xs sm:text-sm lg:text-base">
                 Custom Hashtag/Handle Search
               </td>
-              <td className="py-2 px-4 text-center text-green-400 font-medium">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-green-400 font-medium text-xs sm:text-sm lg:text-base">
                 Yes
               </td>
-              <td className="py-2 px-4 text-center text-gray-400">
+              <td className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-center text-gray-400 text-xs sm:text-sm lg:text-base">
                 Limited/No
               </td>
             </tr>
