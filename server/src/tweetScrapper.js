@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const API_KEY = process.env.TWITTER_API_KEY; 
+const API_KEY = process.env.TWITTER_API_KEY;
 
 module.exports.getTweets = async function getTweets(search_URL, limit) {
   try {
@@ -12,16 +12,28 @@ module.exports.getTweets = async function getTweets(search_URL, limit) {
     while (hasNextPage && totalTweets.length < limit) {
       console.log(search_URL);
       const url = cursor ? `${search_URL}&cursor=${cursor}` : search_URL;
-
+      console.log(url);
       const response = await axios.get(url, {
         headers: {
           "X-API-Key": API_KEY,
         },
       });
-      console.log(response.data);
-      const { tweets = [], has_next_page, cursor: nextCursor } = response.data;
+      // console.log(response.data);
+      const {
+        tweets = [],
+        has_next_page,
+        next_cursor: nextCursor,
+      } = response.data;
+
+      // tweets.forEach((element) => {
+      //   console.log(element.text);
+      // });
 
       totalTweets.push(...tweets);
+
+      console.log(has_next_page);
+      console.log(nextCursor);
+
       hasNextPage = has_next_page;
       cursor = nextCursor;
 
@@ -57,9 +69,10 @@ module.exports.getTweetsOfHandle = async function getTweetsOfHandle(
         },
       });
       console.log(response.data);
-      const { data, has_next_page, cursor: nextCursor } = response.data;
-      console.log(data.tweets);
+      const { data, has_next_page, next_cursor: nextCursor } = response.data;
+      // console.log(data.tweets);
       const tweets = data.tweets;
+      console.log(nextCursor);
 
       totalTweets.push(...tweets);
       hasNextPage = has_next_page;

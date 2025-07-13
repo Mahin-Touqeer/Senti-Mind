@@ -43,12 +43,16 @@ module.exports.hashtag = async (req, res, next) => {
     const search_URL = createHashtagURL(query, dateRange);
 
     const tweets = await getTweets(search_URL, limit);
+
     if (!tweets.length) {
       res.status(500).json({
         message: `No tweets found for this request`,
       });
       return;
     }
+
+    const tweetSet = new Set(tweets);
+    console.log("Number of tweets: " + tweetSet.size);
 
     const tempArticle = await getTwitterArticle(tweets, query, selectedAiModel);
 
@@ -182,6 +186,10 @@ module.exports.handle = async function (req, res, next) {
       });
       return;
     }
+
+    const tweetSet = new Set(tweets);
+    console.log(tweetSet.size);
+    console.log("Number of tweets: " + tweets.length);
 
     const tempArticle = await getTwitterArticle(tweets, query, selectedAiModel);
 
