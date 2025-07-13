@@ -111,7 +111,7 @@ const Billing = () => {
       <div className="min-h-screen text-stone-100 pt-20 alink">
         <div className="m-auto xl:max-w-[1050px] w-98/100 space-y-6 p-4 md:p-8">
           {/* Header */}
-          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
+          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 md:p-6 border border-white/10">
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-2xl font-bold text-white mb-2">
@@ -134,7 +134,7 @@ const Billing = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Current Plan */}
             {/* Current Plan - Enhanced with Subscription Management */}
-            <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
+            <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 md:p-6 border border-white/10">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-semibold text-white flex items-center gap-2">
                   <FiCreditCard className="text-blue-400" />
@@ -190,7 +190,7 @@ const Billing = () => {
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-stone-400">API Limit</span>
+                    <span className="text-stone-400">Credit limit</span>
                     <span className="text-white font-medium">
                       {usageQuota}/month
                     </span>
@@ -269,7 +269,7 @@ const Billing = () => {
             </div>
 
             {/* Usage Statistics */}
-            <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
+            <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 md:p-6 border border-white/10">
               <h2 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                 <FiTrendingUp className="text-blue-400" />
                 Current Usage
@@ -278,7 +278,7 @@ const Billing = () => {
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-sm mb-2">
-                    <span className="text-stone-300">API Requests</span>
+                    <span className="text-stone-300">Credits used</span>
                     <span className="text-stone-400">
                       {apiUsage}/{usageQuota}
                     </span>
@@ -330,7 +330,7 @@ const Billing = () => {
           </div>
 
           {/* Billing History */}
-          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
+          <div className="backdrop-blur-lg bg-white/5 rounded-xl md:p-6 p-4 border border-white/10">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-white flex items-center gap-2">
                 <FiCalendar className="text-blue-400" />
@@ -439,7 +439,7 @@ const Billing = () => {
           )} */}
 
           {/* FAQ Section */}
-          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
+          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 md:p-6 border border-white/10">
             <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
               <FiHelpCircle className="text-blue-400" />
               Frequently Asked Questions
@@ -505,13 +505,13 @@ const Billing = () => {
                   <FiExternalLink className="w-4 h-4" />
                 </Link>
 
-                <Link
+                {/* <Link
                   to="/help"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-stone-300 rounded-lg hover:bg-white/20 transition-colors"
                 >
                   View Documentation
                   <FiExternalLink className="w-4 h-4" />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

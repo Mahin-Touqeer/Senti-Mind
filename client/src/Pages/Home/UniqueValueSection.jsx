@@ -23,7 +23,7 @@ function UniqueValueSection() {
         data-aos-duration="750"
         // data-aos-delay="1000"
       >
-        Real Twitter Data. Real Insights. No AI Guesswork.
+        Real Twitter Data | Real Insights | No AI Guesswork.
       </h2>
 
       {/* Direct AI Misconception Banner */}

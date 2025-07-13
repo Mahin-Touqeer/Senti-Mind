@@ -204,7 +204,7 @@ const Profile = () => {
               {/* API Requests */}
               <div className="space-y-3">
                 <div className="flex justify-between text-sm">
-                  <span className="text-stone-300">API Requests</span>
+                  <span className="text-stone-300">Credits used</span>
                   <span className="text-stone-400">
                     {apiUsage}/{usageQuota}
                   </span>
