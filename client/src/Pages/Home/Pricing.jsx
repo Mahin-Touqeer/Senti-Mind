@@ -46,7 +46,7 @@ function Pricing() {
           plan="FREE"
           description="Perfect for getting started"
           features={[
-            { text: "10 searches", available: true },
+            { text: "10 CREDITS", available: true },
             { text: "upto 30 tweets per search", available: true },
             { text: "Basic Reddit analysis", available: true },
             { text: "Standard AI insights", available: true },
@@ -62,7 +62,7 @@ function Pricing() {
           plan="BASIC"
           description="For regular content creators"
           features={[
-            { text: "100 searches per month", available: true },
+            { text: "100 CREDITS per month", available: true },
             { text: "upto 75 tweets per search", available: true },
             { text: "Enhanced Reddit analysis", available: true },
             { text: "Advanced AI insights", available: true },
@@ -79,7 +79,7 @@ function Pricing() {
           plan="PRO"
           description="For professional use"
           features={[
-            { text: "180 searches", available: true },
+            { text: "180 CREDITS per month", available: true },
             { text: "upto 120 tweets per search", available: true },
             { text: "Full Reddit access", available: true },
             { text: "Premium AI models", available: true },
