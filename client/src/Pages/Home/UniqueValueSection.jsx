@@ -8,7 +8,7 @@ import {
 
 function UniqueValueSection() {
   // FAQ state
-  const [faqOpen, setFaqOpen] = useState(null);
+  // const [faqOpen, setFaqOpen] = useState(null);
 
   return (
     <section className="relative  my-36  rounded-3xl  mb-24">
@@ -23,7 +23,7 @@ function UniqueValueSection() {
         data-aos-duration="750"
         // data-aos-delay="1000"
       >
-        Real Twitter Data | Real Insights | No AI Guesswork.
+        Real Twitter Data | Real Insights
       </h2>
 
       {/* Direct AI Misconception Banner */}
@@ -35,9 +35,8 @@ function UniqueValueSection() {
         <div className="flex items-center gap-2 bg-slate-900/5 border border-purple-500/30 rounded-xl px-5 py-3 shadow">
           <Verified className="text-green-400" />
           <span className="font-semibold text-white">
-            SentiMind analyzes{" "}
-            <span className="text-purple-400">real Twitter data</span> — not
-            AI-generated content.
+            Powered by{" "}
+            <span className="text-purple-400">real Twitter data</span>
           </span>
         </div>
       </div>
@@ -52,11 +51,11 @@ function UniqueValueSection() {
 
       {/* Comparison Table */}
       <div
-        className="overflow-x-auto mb-12 flex justify-center "
+        className="overflow-auto mb-12 flex justify-center "
         data-aos="fade-up"
         data-aos-duration="750"
       >
-        <table className="min-w-[280px] max-w-4xl w-full text-xs sm:text-sm lg:text-base bg-gradient-to-r from-[#320D69] via-[#230E59] to-[#170E4B] rounded-2xl mx-auto shadow-lg">
+        <table className="min-w-[280px] max-w-4xl w-full text-xs sm:text-sm lg:text-base bg-gradient-to-r from-[#320D69] via-[#230E59] to-[#170E4B] rounded-2xl mx-auto  shadow-lg">
           <thead>
             <tr>
               <th className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-left text-gray-300 font-semibold text-xs sm:text-sm lg:text-base">
@@ -197,7 +196,7 @@ function UniqueValueSection() {
       </div> */}
 
       {/* Trust-Building Badges */}
-      <div
+      {/* <div
         className="flex flex-wrap gap-4 justify-center mb-12"
         data-aos="fade-up"
         data-aos-duration="750"
@@ -206,13 +205,13 @@ function UniqueValueSection() {
           <Verified className="mr-2" fontSize="small" />
           Powered by Real Twitter Data
         </span>
-        {/* <span className="inline-flex items-center px-4 py-2 rounded-full bg-slate-900/80 border border-purple-500/30 text-purple-300 font-semibold shadow">
+        <span className="inline-flex items-center px-4 py-2 rounded-full bg-slate-900/80 border border-purple-500/30 text-purple-300 font-semibold shadow">
           No AI-Generated Trends — 100% Authentic Insights
         </span>
         <span className="inline-flex items-center px-4 py-2 rounded-full bg-slate-900/80 border border-pink-400/30 text-pink-300 font-semibold shadow">
           Your Hashtag. Your Handle. Your Data.
-        </span> */}
-      </div>
+        </span>
+      </div> */}
 
       {/* FAQ Section */}
       {/* <div className="max-w-2xl mx-auto">

@@ -5,7 +5,7 @@ import { toastOptions } from "../../Utils/options";
 import { useDispatch } from "react-redux";
 import { hideModal } from "../../Slices/modalSlice";
 import { useNavigate } from "react-router-dom";
-const VITE_BACKEND_URL=  import.meta.env.VITE_BACKEND_URL
+const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
