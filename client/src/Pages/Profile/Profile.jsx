@@ -125,7 +125,7 @@ const Profile = () => {
           </div>
 
           {/* Usage Stats */}
-          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
+          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 md:p-6 border border-white/10">
             <h2 className="text-xl font-semibold mb-6 text-white flex items-center gap-2">
               <FiTrendingUp className="text-blue-400" />
               Usage Statistics
@@ -222,7 +222,7 @@ const Profile = () => {
           </div>
 
           {/* Billing & Subscription Management */}
-          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
+          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 md:p-6 border border-white/10">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-white flex items-center gap-2">
                 <FiCreditCard className="text-blue-400" />
@@ -258,7 +258,7 @@ const Profile = () => {
           </div>
 
           {/* Recent Activities */}
-          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10 z-20 relative">
+          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 md:p-6 border border-white/10 z-20 relative">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-white">
                 Recent Activities
@@ -345,7 +345,7 @@ const Profile = () => {
           </div>
 
           {/* Saved Articles Section */}
-          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10 z-10 relative">
+          <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 md:p-6 border border-white/10 z-10 relative">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-white flex items-center gap-2">
                 <FiBookmark className="text-blue-400" />
