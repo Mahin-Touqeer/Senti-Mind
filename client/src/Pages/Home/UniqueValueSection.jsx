@@ -55,7 +55,7 @@ function UniqueValueSection() {
         data-aos="fade-up"
         data-aos-duration="750"
       >
-        <table className="min-w-[280px] max-w-4xl w-full text-xs sm:text-sm lg:text-base bg-gradient-to-r from-[#320D69] via-[#230E59] to-[#170E4B] rounded-2xl mx-auto  shadow-lg">
+        <table className="min-w-[280px] max-w-4xl w-full text-xs sm:text-sm lg:text-base bg-gradient-to-r backdrop-blur-lg rounded-2xl mx-auto  shadow-lg">
           <thead>
             <tr>
               <th className="py-2 px-2 sm:py-3 sm:px-4 lg:py-4 lg:px-6 text-left text-gray-300 font-semibold text-xs sm:text-sm lg:text-base">
