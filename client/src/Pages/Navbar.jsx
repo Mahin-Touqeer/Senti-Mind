@@ -64,12 +64,14 @@ function Navbar() {
       <nav className="fixed top-0 left-0 w-full backdrop-blur-md bg-black/10 border-b border-purple-500/10 z-50 alink">
         <div className="px-4 md:px-6 m-auto max-w-[1050px] flex items-center justify-between">
           {/* Logo Section */}
-          <div className="flex items-center gap-2 py-3">
-            <img src="/Logo.png" alt="logo" className="h-8 opacity-90" />
-            <h1 className="text-white text-xl opacity-90 font-semibold">
-              Senti Mind
-            </h1>
-          </div>
+          <Link to="/">
+            <div className="flex items-center gap-2 py-3">
+              <img src="/Logo.png" alt="logo" className="h-8 opacity-90" />
+              <h1 className="text-white text-xl opacity-90 font-semibold">
+                Senti Mind
+              </h1>
+            </div>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
@@ -135,13 +137,15 @@ function Navbar() {
             ) : (
               <div className="flex items-center gap-4">
                 <Logout />
-                <Avatar
-                  className="cursor-pointer hover:ring-2 hover:ring-purple-500/50 transition-all duration-300"
-                  style={{ backgroundColor: "#8F37FF" }}
-                  src={userInfo.profilePicture}
-                >
-                  {userInfo?.username?.slice(0, 1).toUpperCase()}
-                </Avatar>
+                <Link to="/profile">
+                  <Avatar
+                    className="cursor-pointer hover:ring-2 hover:ring-purple-500/50 transition-all duration-300"
+                    style={{ backgroundColor: "#8F37FF" }}
+                    src={userInfo.profilePicture}
+                  >
+                    {userInfo?.username?.slice(0, 1).toUpperCase()}
+                  </Avatar>
+                </Link>
               </div>
             )}
           </div>
@@ -162,12 +166,14 @@ function Navbar() {
                 Sign In
               </button>
             ) : (
-              <Avatar
-                className="cursor-pointer hover:ring-2 hover:ring-purple-500/50 transition-all duration-300"
-                style={{ backgroundColor: "#8F37FF", width: 32, height: 32 }}
-              >
-                {userInfo?.username?.slice(0, 1).toUpperCase()}
-              </Avatar>
+              <Link to="/profile">
+                <Avatar
+                  className="cursor-pointer hover:ring-2 hover:ring-purple-500/50 transition-all duration-300"
+                  style={{ backgroundColor: "#8F37FF", width: 32, height: 32 }}
+                >
+                  {userInfo?.username?.slice(0, 1).toUpperCase()}
+                </Avatar>
+              </Link>
             )}
 
             <button

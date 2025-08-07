@@ -56,14 +56,14 @@ function Footer() {
               Resources
             </h3>
             <ul className="space-y-2">
-              {/* <li>
+              <li>
                 <Link
-                  to="/docs"
+                  to="/contact"
                   className="text-gray-400 hover:text-purple-500 transition-colors text-sm"
                 >
-                  Documentation
+                  Contact
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link
                   to="/pricing"
@@ -121,7 +121,7 @@ function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Tweet Analyzer. All rights reserved.
+              © {new Date().getFullYear()} Senti Mind. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
