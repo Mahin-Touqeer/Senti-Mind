@@ -38,7 +38,7 @@ function createSecretToken(uid) {
     throw new ExpressError(400, "User ID is required");
   }
   try {
-    return jwt.sign({ uid }, process.env.TOKEN_KEY, { expiresIn: "24h" });
+    return jwt.sign({ uid }, process.env.TOKEN_KEY, { expiresIn: "31d" });
   } catch (error) {
     throw new ExpressError(500, "Error generating token");
   }
