@@ -51,7 +51,7 @@ function UniqueValueSection() {
 
       {/* Comparison Table */}
       <div
-        className="overflow-x-auto mb-12 flex justify-center "
+        className="overflow-x-hidden mb-12 flex justify-center "
         data-aos="fade-up"
         data-aos-duration="750"
       >
