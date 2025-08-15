@@ -5,18 +5,20 @@ import { toastOptions } from "../../Utils/options";
 import { useDispatch } from "react-redux";
 import { hideModal } from "../../Slices/modalSlice";
 import { useNavigate } from "react-router-dom";
+import { useQueryClient } from "@tanstack/react-query";
 const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 function GoogleButtonDummy() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
   async function handleResponse(response) {
-    console.log(response);
+    // console.log(response);
     if (response && response.code) {
       try {
         await googleAuthHandler(response.code);
+        queryClient.invalidateQueries(["isLoggedIn", "userInfo"]);
         toast.success("Logged in successfully", {
           ...toastOptions,
           autoClose: 500,

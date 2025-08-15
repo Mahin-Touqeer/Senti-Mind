@@ -12,7 +12,7 @@ function Sample() {
       <h1 className="text-center text-xl  md:text-2xl mt-4 md:mt-0 mb-6 font-bold text-gray-300">
         #ENGvIND
       </h1>
-      <div className="h-[408px] overflow-y-scroll modal-scroll">
+      <div className="h-[408px] overflow-y-scroll modal-scroll text-sm md:text-base">
         <ReactMarkdown>## Part 1: Quick Insight</ReactMarkdown>
 
         <ReactMarkdown>**Main Topics:**</ReactMarkdown>

@@ -10,7 +10,7 @@ function Products() {
       <Navbar />
       <div className="m-auto xl:max-w-[1050px] w-995/1000 text-stone-100 pt-16">
         {/* TYPEWRITER  */}
-        <h1 className="text-3xl py-6 text-center font-bold">
+        <h1 className="text-2xl md:text-3xl py-6 text-center font-bold">
           <Typewriter
             words={[
               "AI Tweet Analyzer . . .",
@@ -26,14 +26,15 @@ function Products() {
           />
           <span className="opacity-0">|</span>
         </h1>
-        <h1 className="text-center pb-6 text-lg">
-          Enter any hashtag or topic. Instantly get a concise,
+        <h1 className="text-center pb-6 text-sm md:text-lg">
+          Enter any hashtag or topic
+          <br className="block md:hidden" /> Instantly get a concise,
           journalist-friendly article
           <br /> of the top tweets/posts
         </h1>
 
         {/* NAVIGATION  */}
-        <div className="flex justify-center">
+        <div className="flex justify-center scale-90 md:scale-0">
           <NavLink
             to="/analyze/twitter"
             className="alink flex items-center justify-center bg-[#9810FA] w-[150px]  rounded-tl-lg rounded-bl-lg opacity-30"

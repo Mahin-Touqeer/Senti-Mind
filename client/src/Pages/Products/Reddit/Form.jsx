@@ -22,7 +22,7 @@ function Form2({ handleSubmission, subscriptionTier, isMutating }) {
       className="lg:w-2/5 w-full py-6 px-2 lg:px-6 bg-mber-800"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <h1>Enter a subreddit to analyze</h1>
+      <h1 className="mx-1 lg:mx-0">Enter a subreddit to analyze</h1>
 
       {/* Query Input  */}
       <>
@@ -50,7 +50,7 @@ function Form2({ handleSubmission, subscriptionTier, isMutating }) {
 
       {/* Coming soon search Type  */}
       <>
-        <h1 className="mt-4">Search type</h1>
+        <h1 className="mt-4 mb-1 mx-1 lg:mx-0">Search type</h1>
         <div className="w-full bg-[#2D283C] p-1 rounded-xl text-center searchTypeDiv">
           <input
             type="radio"
@@ -79,7 +79,7 @@ function Form2({ handleSubmission, subscriptionTier, isMutating }) {
 
       {/* Number of posts  */}
       <>
-        <h1 className="mt-8 ">Number of posts to analyze</h1>
+        <h1 className="mt-8 mx-1 lg:mx-0">Number of posts to analyze</h1>
         <input
           type="number"
           className="bg-[#2D283C] rounded-xl w-full p-4 my-2 outline-0"
@@ -97,7 +97,7 @@ function Form2({ handleSubmission, subscriptionTier, isMutating }) {
 
       {/* Sort  */}
       <>
-        <h1 className="mt-8">Sort Posts By</h1>
+        <h1 className="mt-8 mx-1 lg:mx-0 mb-1">Sort Posts By</h1>
         <div className="mydict">
           <div>
             <label style={{ width: "30%" }}>
@@ -217,7 +217,7 @@ function Form2({ handleSubmission, subscriptionTier, isMutating }) {
 
       {/* Filter  */}
       <>
-        <h1 className="mt-8 ">Filter posts by</h1>
+        <h1 className="mt-8 mx-1 lg:mx-0 mb-1">Filter posts by</h1>
         <div className="mydict">
           <div>
             <label style={{ width: "30%" }}>

@@ -64,7 +64,7 @@ function Box() {
     }
   }
 
-  if (isLoading || isInfoPending) {
+  if (isLoading || (isLoggedIn !== false && isInfoPending)) {
     return <PageLoader />;
   }
   let subscriptionTier = "free";

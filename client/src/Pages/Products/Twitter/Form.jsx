@@ -131,7 +131,9 @@ function Form({
       >
         {/* Query Input  */}
         <>
-          <h1>Enter a hashtag or keyword to analyze</h1>
+          <h1 className="mx-1 lg:mx-0">
+            Enter a hashtag or keyword to analyze
+          </h1>
           <input
             type="text"
             className="bg-[#2D283C] rounded-xl w-full p-4 my-2 outline-0"
@@ -155,7 +157,7 @@ function Form({
 
         {/* Search Type  */}
         <>
-          <h1 className="mt-8 ">Search type</h1>
+          <h1 className="mt-8 mx-1 lg:mx-0 ">Search type</h1>
           <div className="w-full bg-[#2D283C] p-1 rounded-xl text-center searchTypeDiv">
             <input
               type="radio"
@@ -234,7 +236,7 @@ function Form({
         {/* Ai Model Selection  */}
         <>
           <div>
-            <label className="block text-white font-medium mt-4 mb-2">
+            <label className="block text-white font-medium mt-4 mb-2 mx-1 lg:mx-0">
               Select AI Model
             </label>
             <div className="relative alink">
@@ -296,7 +298,7 @@ function Form({
 
         {/* Enter number of tweets  */}
         <>
-          <h1 className="mt-8 ">Number of tweets to analyze</h1>
+          <h1 className="mt-8 mx-1 lg:mx-0">Number of tweets to analyze</h1>
           <input
             type="number"
             className="bg-[#2D283C] rounded-xl w-full p-4 my-2 outline-0"
@@ -315,7 +317,7 @@ function Form({
 
         {/* Filter posts  */}
         <>
-          <h1 className="mt-8 mb-2">Filter posts by</h1>
+          <h1 className="mt-8 mb-2 mx-1 lg:mx-0">Filter posts by</h1>
           <div className="mydict">
             <div>
               <label

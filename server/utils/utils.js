@@ -1,7 +1,7 @@
 require("dotenv").config();
 const getResFromGemini = require("../services/getResFromGemini");
 const jwt = require("jsonwebtoken");
-const User = require("../models/User");
+// const User = require("../models/User");
 const ExpressError = require("./ExpressError");
 const getResFromPerplexity = require("../services/getResFromPerplexity");
 
@@ -38,7 +38,7 @@ function createSecretToken(uid) {
     throw new ExpressError(400, "User ID is required");
   }
   try {
-    return jwt.sign({ uid }, process.env.TOKEN_KEY, { expiresIn: "31d" });
+    return jwt.sign({ uid }, process.env.TOKEN_KEY, { expiresIn: "62d" });
   } catch (error) {
     throw new ExpressError(500, "Error generating token");
   }

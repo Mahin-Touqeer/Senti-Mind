@@ -47,7 +47,7 @@ module.exports.signup = async (req, res, next) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-      maxAge: 30 * 24 * 60 * 60 * 1000, // 1 month
+      // maxAge: 30 * 24 * 60 * 60 * 1000, // 1 month
     });
 
     sendVerificationEmail(email, token);
@@ -88,7 +88,7 @@ module.exports.login = async (req, res, next) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-      maxAge: 30 * 24 * 60 * 60 * 1000, // 1 month
+      // maxAge: 30 * 24 * 60 * 60 * 1000, // 1 month
     });
 
     res.json({
@@ -126,7 +126,7 @@ module.exports.googleAuthHandler = async function (req, res, next) {
     const { code } = req.body;
     const googleRes = await oauth2client.getToken(code);
 
-    console.log(googleRes);
+    // console.log(googleRes);
 
     oauth2client.setCredentials(googleRes.tokens);
 
@@ -163,7 +163,7 @@ module.exports.googleAuthHandler = async function (req, res, next) {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-      maxAge: 30 * 24 * 60 * 60 * 1000, // 1 month
+      // maxAge: 30 * 24 * 60 * 60 * 1000, // 1 month
     });
 
     res.json({
