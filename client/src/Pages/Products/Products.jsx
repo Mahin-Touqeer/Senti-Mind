@@ -34,7 +34,7 @@ function Products() {
         </h1>
 
         {/* NAVIGATION  */}
-        <div className="flex justify-center scale-90 md:scale-0">
+        <div className="flex justify-center scale-90 md:scale-100">
           <NavLink
             to="/analyze/twitter"
             className="alink flex items-center justify-center bg-[#9810FA] w-[150px]  rounded-tl-lg rounded-bl-lg opacity-30"
