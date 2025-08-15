@@ -72,7 +72,7 @@ function Reddit() {
     <>
       <div
         className="mt-8 mb-16 h-auto bg-[#100841] m-auto  rounded-4xl flex flex-wrap alink"
-        style={{ boxShadow: "0px 0px 1px #fff" }}
+        // style={{ boxShadow: "0px 0px 1px #fff" }}
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-once={true}
