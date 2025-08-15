@@ -15,7 +15,7 @@ function ContactUs() {
         {/* Go Back Button */}
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center gap-2 px-5 py-2 mb-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium shadow hover:scale-105 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          className="flex items-center gap-2 px-5 py-2 mb-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium shadow hover:scale-102 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 cursor-pointer"
         >
           <ArrowBackIosNewIcon fontSize="small" />
           Go Back

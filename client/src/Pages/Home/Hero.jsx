@@ -60,7 +60,7 @@ function Hero() {
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="700"
-            className="cursor-pointer group/btn relative md:w-full max-w-[350px] mt-8 overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 p-px font-semibold text-white shadow-[0_1000px_0_0_hsl(0_0%_100%_/_0%)_inset] transition-colors hover:shadow-[0_1000px_0_0_hsl(0_0%_100%_/_2%)_inset]"
+            className="cursor-pointer group/btn relative md:w-full max-w-[350px] md:mt-8 mt-14 overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 p-px font-semibold text-white shadow-[0_1000px_0_0_hsl(0_0%_100%_/_0%)_inset] transition-colors hover:shadow-[0_1000px_0_0_hsl(0_0%_100%_/_2%)_inset]"
           >
             <div className="relative rounded-xl bg-slate-950/50 px-4 py-3 transition-colors group-hover/btn:bg-transparent">
               <span className="relative flex items-center justify-center gap-2">

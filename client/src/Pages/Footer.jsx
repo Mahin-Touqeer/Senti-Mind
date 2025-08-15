@@ -105,14 +105,14 @@ function Footer() {
               >
                 <GitHub />
               </a> */}
-              {/* <a
-                href="https://linkedin.com"
+              <a
+                href="https://www.linkedin.com/in/mahin-touqeer-6415b0320/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-purple-500 transition-colors"
               >
                 <LinkedIn />
-              </a> */}
+              </a>
             </div>
           </div>
         </div>

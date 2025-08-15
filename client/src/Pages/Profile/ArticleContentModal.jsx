@@ -58,7 +58,7 @@ export const ArticleContentModal = ({
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-white/10 rounded-full transition-colors text-stone-400 hover:text-stone-200"
+              className="p-2 hover:bg-white/10 rounded-full transition-colors text-stone-400 hover:text-stone-200 cursor-pointer"
             >
               ✕
             </button>

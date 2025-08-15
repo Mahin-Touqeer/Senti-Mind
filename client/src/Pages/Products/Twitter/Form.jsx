@@ -423,7 +423,7 @@ function Form({
         </>
 
         {/* Plan indicator */}
-        <div className="mt-4 p-3 bg-gray-800 rounded-lg text-sm">
+        <div className="mt-4 p-3 bg-[#2D283C] rounded-lg text-sm">
           <div className="flex justify-between items-center">
             <span>
               Current plan:{" "}

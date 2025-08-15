@@ -95,17 +95,17 @@ function Navbar() {
                 Profile
               </Link>
             )}
-            {/* <Link
-              to="/blog"
-              className="text-white hover:text-purple-300 transition-colors duration-300 font-medium"
-            >
-              Blog
-            </Link> */}
             <Link
               to="/pricing"
               className="text-white hover:text-purple-300 transition-colors duration-300 font-medium"
             >
               Pricing
+            </Link>
+            <Link
+              to="/contact"
+              className="text-white hover:text-purple-300 transition-colors duration-300 font-medium"
+            >
+              Contact
             </Link>
           </div>
 
@@ -153,7 +153,7 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-3">
             {/* Mobile Auth Icons */}
-            {isPending || isInfoPending ? (
+            {isPending || (isLoggedIn !== false && isInfoPending) ? (
               <Loader />
             ) : !isLoggedIn ? (
               <button
@@ -245,19 +245,20 @@ function Navbar() {
                   Profile
                 </Link>
               )}
-              {/* <Link
-                to="/blog"
-                className="block py-3 text-white hover:text-purple-300 hover:bg-purple-500/10 rounded-lg px-4 transition-all duration-300 font-medium"
-                onClick={closeMobileMenu}
-              >
-                Blog
-              </Link> */}
+
               <Link
                 to="/pricing"
                 className="block py-3 text-white hover:text-purple-300 hover:bg-purple-500/10 rounded-lg px-4 transition-all duration-300 font-medium"
                 onClick={closeMobileMenu}
               >
                 Pricing
+              </Link>
+              <Link
+                to="/contact"
+                className="block py-3 text-white hover:text-purple-300 hover:bg-purple-500/10 rounded-lg px-4 transition-all duration-300 font-medium"
+                onClick={closeMobileMenu}
+              >
+                Contact
               </Link>
             </div>
           </div>
