@@ -117,6 +117,9 @@ function UniqueValueSection() {
                 Limited/No
               </td>
             </tr>
+            <tr>
+              <td></td>
+            </tr>
           </tbody>
         </table>
       </div>
