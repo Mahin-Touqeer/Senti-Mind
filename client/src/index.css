@@ -17,15 +17,11 @@ body::-webkit-scrollbar {
 }
 
 :root {
-  /* --primary-color: #500289;
-  --secondary-color: #010311; */
   --primary-color: #500289;
   --secondary-color: #091047;
   --tertiary-color: #060d3e;
-  /* --tertiary-color: #050a2d; */
 }
 #root {
-  /* background: linear-gradient(to bottom, #170a2c, #010311); */
   background: linear-gradient(
     135deg,
     var(--primary-color) 0%,
@@ -249,4 +245,22 @@ span[twitter-label="kill"] {
 button[twitter-label="kill"] {
   opacity: 50%;
   cursor: not-allowed;
+}
+
+/* When dropdown becomes visible */
+.products-dropdown {
+  animation: dropdownFadeIn 0.3s ease forwards;
+  pointer-events: auto;
+}
+
+/* Keyframes for smooth fade + slide */
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

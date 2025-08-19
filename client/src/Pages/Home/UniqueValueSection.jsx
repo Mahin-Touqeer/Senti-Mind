@@ -11,7 +11,7 @@ function UniqueValueSection() {
   // const [faqOpen, setFaqOpen] = useState(null);
 
   return (
-    <section className="relative  my-36  rounded-3xl  mb-24">
+    <section className="relative  my-36  max-w-4xl mx-auto rounded-3xl  mb-24">
       {/* Animated background orbs */}
       <div className="absolute opacity-50 top-10 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute opacity-50 bottom-10 right-10 w-96 h-96 bg-pink-500/15 rounded-full blur-3xl pointer-events-none" />
@@ -51,7 +51,7 @@ function UniqueValueSection() {
 
       {/* Comparison Table */}
       <div
-        className="overflow-x-hidden mb-12 flex justify-center "
+        className="overflow-x-hidden mb-12 flex justify-center md:rounded-xl"
         data-aos="fade-up"
         data-aos-duration="750"
       >

@@ -12,6 +12,21 @@ import { Menu, Close } from "@mui/icons-material";
 function Navbar() {
   const dispatch = useDispatch();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // add to your component
+  const [productDropdownOpen, setProductDropdownOpen] = useState(false);
+  let dropdownTimer = null;
+
+  // use callbacks to avoid closure issues
+  const handleProductsMouseEnter = () => {
+    clearTimeout(dropdownTimer);
+    setProductDropdownOpen(true);
+  };
+  const handleProductsMouseLeave = () => {
+    dropdownTimer = setTimeout(() => setProductDropdownOpen(false), 100);
+  };
+  const handleDropdownLinkClick = () => {
+    setProductDropdownOpen(false);
+  };
 
   const { data: isLoggedIn, isPending } = useQuery({
     queryKey: ["isLoggedIn"],
@@ -61,7 +76,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full backdrop-blur-md bg-black/10 border-b border-purple-500/10 z-50 alink">
+      <nav className="fixed top-0 left-0 w-full bg-black/10 border-b border-purple-500/10 z-50 alink">
+        <div className="w-full h-full -z-10 backdrop-blur-md absolute top-0 left-0" />
         <div className="px-4 md:px-6 m-auto max-w-[1050px] flex items-center justify-between">
           {/* Logo Section */}
           <Link to="/">
@@ -81,12 +97,58 @@ function Navbar() {
             >
               Home
             </Link>
-            <Link
-              to="/analyze/twitter"
-              className="text-white hover:text-purple-300 transition-colors duration-300 font-medium"
+            <div
+              className="relative"
+              onMouseEnter={handleProductsMouseEnter}
+              onMouseLeave={handleProductsMouseLeave}
             >
-              Products
-            </Link>
+              <button
+                className="text-white hover:text-purple-300 transition-colors duration-300 font-medium flex items-center gap-1 cursor-pointer"
+                type="button"
+              >
+                Products
+                <ChevronDown width={18} height={18} />
+              </button>
+              {productDropdownOpen && (
+                <div
+                  className="absolute    -left-5 top-[calc(100%+0.5rem)] min-w-[270px] w-auto 
+              border-white/15 shadow-lg mt-2 -z-20 backdrop-blur-xl bg-black/10 products-dropdown "
+                  style={{
+                    borderBottomLeftRadius: "0.5rem",
+                    borderBottomRightRadius: "0.5rem",
+                  }}
+                >
+                  <Link
+                    to="/analyze/twitter"
+                    className="block px-5 py-2 text-white transition-all  duration-200
+               hover:text-transparent hover:bg-clip-text 
+               hover:bg-gradient-to-r hover:from-pink-300  hover:to-purple-300"
+                    onClick={handleDropdownLinkClick}
+                  >
+                    Twitter Analyzer
+                  </Link>
+                  <Link
+                    to="/analyze/reddit"
+                    className="block px-5 py-2 text-white transition-all  duration-200
+               hover:text-transparent hover:bg-clip-text 
+               hover:bg-gradient-to-r hover:from-pink-200 hover:to-purple-300"
+                    onClick={handleDropdownLinkClick}
+                  >
+                    Reddit Analyzer
+                  </Link>
+                  {/* <Link
+                    to="/analyze/reddit"
+                    className="block px-5 py-2 text-white transition-all  duration-200
+               hover:text-transparent hover:bg-clip-text 
+               hover:bg-gradient-to-r hover:from-pink-300 hover:via-pink-300  hover:to-purple-300"
+                    onClick={handleDropdownLinkClick}
+                  >
+                    Stocks Analyzer (x.com)
+                  </Link> */}
+                </div>
+              )}
+            </div>
+
             {isLoggedIn && (
               <Link
                 to="/profile"
@@ -311,6 +373,7 @@ function Navbar() {
 export default Navbar;
 
 import { LogoutOutlined } from "@mui/icons-material";
+import { ChevronDown } from "lucide-react";
 
 function Logout({ onLogout }) {
   const queryClient = useQueryClient();
