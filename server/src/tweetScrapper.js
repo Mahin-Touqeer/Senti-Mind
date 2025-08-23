@@ -12,7 +12,7 @@ module.exports.getTweets = async function getTweets(search_URL, limit) {
     while (hasNextPage && totalTweets.length < limit) {
       console.log(search_URL);
       const url = cursor ? `${search_URL}&cursor=${cursor}` : search_URL;
-      console.log(url);
+      console.log(API_KEY);
       const response = await axios.get(url, {
         headers: {
           "X-API-Key": API_KEY,
@@ -40,6 +40,7 @@ module.exports.getTweets = async function getTweets(search_URL, limit) {
       console.log(
         `Fetched page ${page++}, total tweets: ${totalTweets.length}`
       );
+      await new Promise((resolve) => setTimeout(resolve, 5000));
     }
 
     totalTweets = totalTweets.map((tweet) => tweet.text);
@@ -62,7 +63,7 @@ module.exports.getTweetsOfHandle = async function getTweetsOfHandle(
     while (hasNextPage && totalTweets.length < limit) {
       console.log(search_URL);
       const url = cursor ? `${search_URL}&cursor=${cursor}` : search_URL;
-
+      console.log(API_KEY);
       const response = await axios.get(url, {
         headers: {
           "X-API-Key": API_KEY,
@@ -81,8 +82,8 @@ module.exports.getTweetsOfHandle = async function getTweetsOfHandle(
       console.log(
         `Fetched page ${page++}, total tweets: ${totalTweets.length}`
       );
+      await new Promise((resolve) => setTimeout(resolve, 5000));
     }
-
     totalTweets = totalTweets.map((tweet) => tweet.text);
     return totalTweets;
   } catch (error) {
