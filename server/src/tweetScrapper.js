@@ -2,7 +2,12 @@ const axios = require("axios");
 
 const API_KEY = process.env.TWITTER_API_KEY;
 
-module.exports.getTweets = async function getTweets(search_URL, limit) {
+module.exports.getTweets = async function getTweets(
+  search_URL,
+  limit,
+  insertedAPIkey,
+  waitTime
+) {
   try {
     let totalTweets = [];
     let hasNextPage = true;
@@ -15,7 +20,7 @@ module.exports.getTweets = async function getTweets(search_URL, limit) {
       console.log(API_KEY);
       const response = await axios.get(url, {
         headers: {
-          "X-API-Key": API_KEY,
+          "X-API-Key": insertedAPIkey || API_KEY,
         },
       });
       // console.log(response.data);
@@ -40,9 +45,9 @@ module.exports.getTweets = async function getTweets(search_URL, limit) {
       console.log(
         `Fetched page ${page++}, total tweets: ${totalTweets.length}`
       );
-      await new Promise((resolve) => setTimeout(resolve, 5000));
-    }
 
+      await new Promise((resolve) => setTimeout(resolve, waitTime || 5000));
+    }
     totalTweets = totalTweets.map((tweet) => tweet.text);
     return totalTweets;
   } catch (error) {

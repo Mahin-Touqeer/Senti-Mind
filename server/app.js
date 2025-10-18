@@ -18,6 +18,7 @@ const analyzeRedditRouter = require("./routes/analyzeRedditRouter");
 const authRouter = require("./routes/authRouter");
 const webhookRouter = require("./routes/webhookRouter");
 const razorpayRouter = require("./routes/razorpayRouter");
+const stocksRouter = require("./routes/stocksRouter");
 
 const cookie_parser = require("cookie-parser");
 const { connectDb } = require("./config/db");
@@ -55,6 +56,7 @@ app.use("/analyze/reddit", analyzeRedditRouter);
 app.use("/auth", authRouter);
 app.use("/subscribe", razorpayRouter);
 app.use("/webhook/sentimind", webhookRouter);
+app.use("/", stocksRouter);
 
 // error-handler
 app.all("*all", (req, res, next) => {
