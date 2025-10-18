@@ -3,7 +3,7 @@ const { getTweets } = require("../src/tweetScrapper");
 const getResFromGemini = require("../services/getResFromGemini");
 const router = express.Router({ mergeParams: true });
 
-const MAX_TWEETS = 38;
+const MAX_TWEETS = 200;
 
 const BASE_URL =
   "https://api.twitterapi.io/twitter/tweet/advanced_search?queryType=Top&query=";
