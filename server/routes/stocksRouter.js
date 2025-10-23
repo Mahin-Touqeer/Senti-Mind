@@ -54,23 +54,27 @@ async function analyzeSentimentGemini(tweets) {
 
   const prompt =
     `
-    You are a sentiment analysis engine. 
-    For each of the following tweets, respond with "positive" or "negative"
-    Filter only those tweets that are relevant to stock market sentiment. 
+    You are a financial sentiment analysis engine specializing in stock market discussions.
 
-    Eg: " Microsoft's new product launch is amazing! Stocks are going to soar!" -> positive and relevant                
+Analyze each of the following tweets and classify them as "positive" or "negative" *only if* they express clear sentiment about a stock, company, or market trend. Ignore tweets that are irrelevant to stock prices, performance, or investor outlook.
 
-    Return ONLY a JSON array like:
-    {
-        "sentiment": [
-            "positive",
-            "negative",
-        ]
-    }
+Examples:
+- "Tesla's earnings beat expectations, this stock will skyrocket!" → positive and relevant  
+- "Apple's supply chain issues might hurt profits this quarter." → negative and relevant  
+- "I love using Google Maps!" → irrelevant (exclude from output)  
 
-    Tweets: ${JSON.stringify(tweets)}
+Return ONLY a JSON object in the format:
+{
+  "sentiment": [
+    "positive",
+    "negative"
+  ]
+}
 
-    dont include any other text  
+Input tweets: ${JSON.stringify(tweets)}
+
+Do not include any explanations or extra text in your response.
+
   ` + "dont include ```json and ``` in the response ";
 
   let text = await getResFromGemini(prompt);
