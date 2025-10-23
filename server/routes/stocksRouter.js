@@ -56,6 +56,9 @@ async function analyzeSentimentGemini(tweets) {
     `
     You are a sentiment analysis engine. 
     For each of the following tweets, respond with "positive" or "negative"
+    Filter only those tweets that are relevant to stock market sentiment. 
+
+    Eg: " Microsoft's new product launch is amazing! Stocks are going to soar!" -> positive and relevant                
 
     Return ONLY a JSON array like:
     {
